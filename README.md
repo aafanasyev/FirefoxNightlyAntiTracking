@@ -21,8 +21,8 @@ sudo apt install python python-pip npm
 Python modules:
 ```bash
 sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python3 get-pip.py 
-sudo python3 -m pip install pytest multiprocess pillow tblib selenium mini-amf bs4 publicsuffix pyvirtualdisplay tabulate plyvel boto3 pandas pyarrow s3fs psutil
+sudo python get-pip.py 
+sudo python -m pip install pytest multiprocess pillow tblib selenium mini-amf bs4 publicsuffix pyvirtualdisplay tabulate plyvel boto3 pandas pyarrow s3fs psutil
 ```
 
 Clone, extract and install some requirements of OpenWPM
@@ -37,8 +37,26 @@ Dockerfile      install.sh          setup.cfg
 Dockerfile-dev  LICENSE             test
 firefox-bin     __pycache__         VERSION
 __init__.py     README.md
+```
+Update install.sh script line38:
+```bash
 
-sudo python3 -m pip install -r requirements-dev.txt
+:~/OpenWPM$ vim install.sh
+[..]
+ sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu/ trusty partner" >> /etc/apt/sources.list.d/canonical_partner.list'
+[..]
+```
+to
+```bash
+:~/OpenWPM$ vim install.sh
+[..]
+ sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu/ bionic partner" >> /etc/apt/sources.list.d/canonical_partner.list'
+[..]
+```
+
+
+#sudo python -m pip install -r requirements-dev.txt
+sudo sh install.sh
 sudo sh install-dev.sh
 ```
 
