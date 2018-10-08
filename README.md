@@ -15,13 +15,14 @@ Before installation  OpenWPM following packages should be installed:
 
 ```bash
 apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove --purge -y && apt autoclean -y
-sudo apt install python, python-pip, npm
+sudo apt install python python-pip npm
 ``` 
 
 Python modules:
 ```bash
-sudo python get-pip.py 
-sudo pip install pytest multiprocess pillow tblib selenium mini-amf bs4 publicsuffix pyvirtualdisplay tabulate plyvel boto3 pandas pyarrow s3fs
+sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python3 get-pip.py 
+sudo python3 -m pip install pytest multiprocess pillow tblib selenium mini-amf bs4 publicsuffix pyvirtualdisplay tabulate plyvel boto3 pandas pyarrow s3fs psutil
 ```
 
 Clone, extract and install some requirements of OpenWPM
@@ -37,7 +38,7 @@ Dockerfile-dev  LICENSE             test
 firefox-bin     __pycache__         VERSION
 __init__.py     README.md
 
-sudo pip install -r requirements-dev.txt
+sudo python3 -m pip install -r requirements-dev.txt
 sudo sh install-dev.sh
 ```
 
