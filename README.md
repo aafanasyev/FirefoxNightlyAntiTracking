@@ -14,6 +14,7 @@ user - OpenWrt - Firefox - mitmproxy
 Before installation  OpenWPM following packages should be installed:
 
 ```bash
+apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove --purge -y && apt autoclean -y
 sudo apt install python, python-pip, npm
 ``` 
 
