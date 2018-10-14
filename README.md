@@ -2,7 +2,7 @@
 This research (September 24 - October 26, 2018) focuses on examining new anti-tracking approach of Firefox Nightly(64.0.1a) against most recent release of Firefox(62.0.3)
 
 # Environment
-For this research was used an ubuntu 18.04.1 with most recent updates. OpenWPM works better with python 2.7.+
+For this research was used an ubuntu 18.04.1 with most recent updates. Test script is written with python 3.6.6
 
 ```
 user - script - Firefox - mitmproxy
@@ -13,13 +13,6 @@ user - script - Firefox - mitmproxy
 
 
 # Installation
-
-Before installation  OpenWPM following packages should be installed:
-
-```bash
-apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove --purge -y && apt autoclean -y
-sudo apt install python python-pip npm
-``` 
 
 Python modules:
 ```bash
