@@ -14,7 +14,8 @@ Selenium 3.14.1 and geckodriver 0.23.0 are required.
 
 
 # Installation
-Run install.sh from root directory.
+use 'git clone https://github.com/aafanasyev/FirefoxNightlyAntiTracking.git'
+Get in to directory and run install.sh. It has all required and optional components
 
 
 
