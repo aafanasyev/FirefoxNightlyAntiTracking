@@ -2,7 +2,7 @@
 
 set -e
 
-echo "This script installs an Python 3 based environment to test a new Firefox Nightly(64.0.1a) Anti-tracking approach."
+echo "This script installs an Python 3 based environment (main.py) to test a new Firefox Nightly(64.0.1a) Anti-tracking approach."
 
 OperatingSystem=$(uname -o)
 HardwarePlatform=$(uname -i)
