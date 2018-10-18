@@ -1,0 +1,21 @@
+1539876446998	mozrunner::runner	INFO	Running command: "/sne/home/aafanasyev/Projects/FirefoxNightlyAntiTracking/firefox-esr/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ROxA800AOGZD"
+1539876448518	Marionette	INFO	Listening on port 43657
+1539876448606	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.nu.nl/static/CACHE/js/f297cdf9ad8a.js, line 37: unreachable code after return statement
+console.log: Accessibility service init or shutdown observer does not exist.
+[Parent 27089, Gecko_IOThread] WARNING: pipe error (58): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539876814454	mozrunner::runner	INFO	Running command: "/sne/home/aafanasyev/Projects/FirefoxNightlyAntiTracking/firefox-esr/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.pYGea0RRMkfw"
+1539876815895	Marionette	INFO	Listening on port 35163
+1539876815974	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.nu.nl/static/CACHE/js/f297cdf9ad8a.js, line 37: unreachable code after return statement
+console.log: Accessibility service init or shutdown observer does not exist.
+[Parent 27314, Gecko_IOThread] WARNING: pipe error (58): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539878346407	mozrunner::runner	INFO	Running command: "/sne/home/aafanasyev/Projects/FirefoxNightlyAntiTracking/firefox-esr/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.L5lTvpGOp1gP"
+1539878347782	Marionette	INFO	Listening on port 36579
+1539878347815	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.nu.nl/static/CACHE/js/f297cdf9ad8a.js, line 37: unreachable code after return statement
+console.log: Accessibility service init or shutdown observer does not exist.
+[Parent 27839, Gecko_IOThread] WARNING: pipe error (57): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping

@@ -28,10 +28,10 @@ print("1 Firefox ESR Version 60.2.2")
 print("2 Firefox Release 62.0.3")
 print("3 Firefox Nightly Version 64.0a1")
 
-print("4 Firefox ESR Version 60.2.2 with Tracking Protection")
-print("5 Firefox Release 62.0.3 with Tracking Protection")
-print("6 Firefox Nightly Version 64.0a1 with Tracking Protection") 
-print("7 Firefox Nightly Version 64.0a1 with Tracking Protectionand and Content Blocking")
+print("4 Firefox ESR Version 60.2.2 with Tracking Protection(TP)")
+print("5 Firefox Release 62.0.3 with Tracking Protection(TP)")
+print("6 Firefox Nightly Version 64.0a1 with Tracking Protection(TP)") 
+print("7 Firefox Nightly Version 64.0a1 with Tracking Protectionand(TP) and Content Blocking(CB)")
 
 print("Experiment is about all cases above with waiting period\n for 10 minutes between each case ")
 
@@ -41,39 +41,68 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 #binary = FirefoxBinary('/home/andrey/Documents/SSN/firefox-esr/firefox')
 #if 
 
+# Three browsers: 
+# (0)Firefox ESR Version 60.2.2
+# (1)Firefox Release 62.0.3
+# (2)Firefox Nightly Version 64.0a1
+browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 
+# Three cases: no TP (0), TP (1), TP and CB (2) 
+cases = ["no TP","TP","TP and CB"]
 
-
-browsers = ['firefox-esr/firefox', 'firefox-release/firefox', 'firefox-nightly/firefox']
-
-for i in browsers:
+for b in browsers:
     # Firefox ESR Version 60.2.2"
-    if browsers[i] == browsers[0]:
-        #Case 
+        if b == browsers[0]:
+        #Two cases no TP (0) and TP (1)
+        for c in cases:
+                # no TP
+                if c == cases[0]:
+                        path_to_browser = (('{0}/{1}').format(path_to_bin,browsers[b]))
+                        binary = FirefoxBinary(path_to_browser)
+
+                        profile = FirefoxProfile()
 
 
-        path_to_browser = (('{0}/{1}').format(os.path.dirname(os.path.realpath(__file__)),browsers[i]))
-        binary = FirefoxBinary(path_to_browser)
+                        #no tracking protection (by default) no cache, accept all cookies(Firefox 62.0.3 (64bit) default)
+                        profile.set_preference("browser.cache.disk.enable", False)
+                        profile.set_preference("browser.cache.disk_cache_ssl", False)
+                        profile.set_preference("browser.cache.memory.enable", False)
+                        profile.set_preference("browser.cache.offline.enable", False)
+                        profile.set_preference("network.cookie.cookieBehavior", 0)
+                        profile.set_preference("network.cookie.lifetimePolicy", 2)
+                        profile.set_preference("places.history.enabled",False)
+                        profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+                elif c == cases[1]:
+
+THINK GOOD ABOUT CASES AND BROWSERS!
+                
+
+
         
-        profile = FirefoxProfile()
 
-        #no tracking protection no cache, accept all cookies(Firefox 62.0.3 (64bit) default)
+path_to_browser = (('{0}/{1}').format(path_to_bin,browsers[b]))
+binary = FirefoxBinary(path_to_browser)
 
-        profile.set_preference("browser.cache.disk.enable", False)
-        profile.set_preference("browser.cache.disk_cache_ssl", False)
-        profile.set_preference("browser.cache.memory.enable", False)
-        profile.set_preference("browser.cache.offline.enable", False)
-        profile.set_preference("network.cookie.cookieBehavior", 0)
-        profile.set_preference("network.cookie.lifetimePolicy", 2)
-        profile.set_preference("places.history.enabled",False)
-        profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+profile = FirefoxProfile()
 
-#profile.set_preference("privacy.trackingprotection.enabled", False)
-#profile.set_preference("privacy.trackingprotection.introCount", 20)
+#no tracking protection no cache, accept all cookies(Firefox 62.0.3 (64bit) default)
+
+profile.set_preference("browser.cache.disk.enable", False)
+profile.set_preference("browser.cache.disk_cache_ssl", False)
+profile.set_preference("browser.cache.memory.enable", False)
+profile.set_preference("browser.cache.offline.enable", False)
+profile.set_preference("network.cookie.cookieBehavior", 0)
+profile.set_preference("network.cookie.lifetimePolicy", 2)
+profile.set_preference("places.history.enabled",False)
+profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+
+profile.set_preference("privacy.trackingprotection.enabled", True)
+#disable guidance
+profile.set_preference("privacy.trackingprotection.introCount", 20)
 
 #Nightly content blocking
-profile.set_preference("privacy.trackingprotection.enabled", False)
-profile.set_preference("privacy.trackingprotection.introCount", 20)
+#profile.set_preference("privacy.trackingprotection.enabled", False)
+#profile.set_preference("privacy.trackingprotection.introCount", 20)
 
 profile.set_preference("browser.contentblocking.enabled", False)
 profile.set_preference("browser.contentblocking.introCount", 20)
@@ -121,7 +150,7 @@ for site in sites:
     driver.get(site)
     sleep (10)
     cookies = driver.get_cookies()
-
+    print (cookies)
     print('Amount of loaded cookies: {}' .format(len(cookies)))
 
 
