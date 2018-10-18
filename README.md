@@ -14,7 +14,7 @@ Selenium 3.14.1 and geckodriver 0.23.0 are required.
 
 
 # Installation
-
+Run install.sh from root directory.
 
 
 
