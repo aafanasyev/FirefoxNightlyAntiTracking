@@ -2,17 +2,20 @@
 This research (September 24 - October 26, 2018) focuses on examining new anti-tracking approach of Firefox Nightly(64.0.1a) against most recent release of Firefox(62.0.3)
 
 # Environment
-For this research was used an ubuntu 18.04.1 with most recent updates. Test script is written with python 3.6.6
+For this research was used an Uuntu 18.04.1 with most recent updates. Test script is written with python 3.6.6
 
 ```
-user - script - Firefox - mitmproxy
-        ^                    v
-       sites               logs
-       list                data
+user - script - firefox
+        ^                    
+       sites               
+       list                
 ```
 
 
 # Installation
+
+
+
 
 Python modules:
 ```bash
