@@ -10,7 +10,7 @@ user - script - firefox
    sites   data                
 ```
 
-Selenium 3.14.1 and geckodriver 0.23.0 are required
+Selenium 3.14.1 and geckodriver 0.23.0 are required.
 
 
 # Installation
