@@ -105,7 +105,7 @@ def sitesCookies(driver):
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
         return cookies
 
-def browserSession(binary, profile):
+def browserSession(binary, profile, case):
     #binary = browserVersion(browser)
     options = Options()
     #options.set_headless()
@@ -115,10 +115,22 @@ def browserSession(binary, profile):
     print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
     print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
     print("Selenium: {}".format(__version__))
-    print("no Tracking Protection")
+    if case == "no TP":
+        print("no Tracking Protection")
+    elif case == "TP":
+        print("Tracking Protection")
+    elif case == "TP and CB":
+        print("Tracking Protectionand and Content Blocking")
     print("================================")
-    #print(sitesCookies(driver))
-    print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
+
+    for site in sites:
+        print(site)
+        driver.get(site)
+        # 10 seconds to load page
+        sleep (10)
+        cookies = driver.get_cookies()
+        print (cookies)
+        print('Amount of loaded cookies: {}' .format(len(cookies)))
 
     driver.close()
     driver.quit()
@@ -132,18 +144,15 @@ for case in cases:
     if case == "no TP":
         # Browsers 
         for browser in browsers:
-            browserSession(browserVersion(browser), browsersProfiles(case))
-            sleep(60)
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     elif case == "TP":
         # Browsers 
         for browser in browsers:
             browserSession(browserVersion(browser), browsersProfiles(case))
-            sleep(60)
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
             browserSession(browserVersion(browser), browsersProfiles(case))
-            sleep(60)
     else:
         print("No case selected")
         sys.exit()
