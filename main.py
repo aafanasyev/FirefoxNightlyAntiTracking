@@ -144,15 +144,18 @@ for case in cases:
     if case == "no TP":
         # Browsers 
         for browser in browsers:
+            #print("no Tracking Protection")
             browserSession(browserVersion(browser), browsersProfiles(case), case)
     elif case == "TP":
         # Browsers 
         for browser in browsers:
-            browserSession(browserVersion(browser), browsersProfiles(case))
+            #print("Tracking Protection")
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
-            browserSession(browserVersion(browser), browsersProfiles(case))
+            #print("Tracking Protectionand and Content Blocking")
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     else:
         print("No case selected")
         sys.exit()
