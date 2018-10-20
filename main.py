@@ -180,4 +180,3 @@ for case in cases:
 #profile.set_preference("network.cookie.cookieBehavior", 1)
 # Disable:
 #profile.set_preference("network.cookie.cookieBehavior", 0)
-
