@@ -14,8 +14,6 @@ from selenium.webdriver import FirefoxProfile
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
-
 
 print("This script capture and counts cookies. Different versions of Firefox") 
 print("with different anti-tracking protection techniques enabled are used.")
@@ -49,6 +47,8 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 
 cases = ["no TP","TP","TP and CB"]
+
+sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
 
 def browsersProfiles(case):
     profile = FirefoxProfile()
@@ -105,73 +105,45 @@ def sitesCookies(driver):
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
         return cookies
 
+def browserSession(binary, profile):
+    #binary = browserVersion(browser)
+    options = Options()
+    #options.set_headless()
+
+    driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
+
+    print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
+    print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
+    print("Selenium: {}".format(__version__))
+    print("no Tracking Protection")
+    print("================================")
+    #print(sitesCookies(driver))
+    print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
+
+    driver.close()
+    driver.quit()
+    #wait 10 minutes
+    sleep(10)
+
 
 for case in cases:
     # Case 0 no Tracking protection
-    profile = browsersProfiles(case):
+    #profile = browsersProfiles(case)
     if case == "no TP":
         # Browsers 
         for browser in browsers:
-            binary = browserVersion(browser)
-            options = Options()
-            #options.set_headless()
-
-            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
-
-            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
-            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
-            print("Selenium: {}".format(__version__))
-            print("no Tracking Protection")
-            print("================================")
-            print(sitesCookies(driver))
-            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
-
-            driver.close()
-            driver.quit()
-            #wait 10 minutes
-            sleep(600)
+            browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     elif case == "TP":
         # Browsers 
         for browser in browsers:
-            binary = browserVersion(browser)
-            options = Options()
-            #options.set_headless()
-
-            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
-
-            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
-            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
-            print("Selenium: {}".format(__version__))
-            print("no Tracking Protection")
-            print("================================")
-            print(sitesCookies(driver))
-            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
-
-            driver.close()
-            driver.quit()
-            #wait 10 minutes
-            sleep(600)
+            browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
-            binary = browserVersion(browser)
-            options = Options()
-            #options.set_headless()
-
-            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
-
-            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
-            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
-            print("Selenium: {}".format(__version__))
-            print("no Tracking Protection")
-            print("================================")
-            print(sitesCookies(driver))
-            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
-
-            driver.close()
-            driver.quit()
-            #wait 10 minutes
-            sleep(600)
+            browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     else:
         print("No case selected")
         sys.exit()
