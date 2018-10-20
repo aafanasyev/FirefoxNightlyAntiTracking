@@ -15,6 +15,8 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
+
+
 print("This script capture and counts cookies. Different versions of Firefox") 
 print("with different anti-tracking protection techniques enabled are used.")
 print("Limitations are applied. Disk, memory, offline cache and history of") 
@@ -133,14 +135,17 @@ for case in cases:
         # Browsers 
         for browser in browsers:
             browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     elif case == "TP":
         # Browsers 
         for browser in browsers:
             browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
             browserSession(browserVersion(browser), browsersProfiles(case))
+            sleep(60)
     else:
         print("No case selected")
         sys.exit()
@@ -177,3 +182,4 @@ for case in cases:
 #profile.set_preference("network.cookie.cookieBehavior", 1)
 # Disable:
 #profile.set_preference("network.cookie.cookieBehavior", 0)
+
