@@ -105,7 +105,7 @@ def sitesCookies(driver):
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
         return cookies
 
-def browserSession(binary, profile, case):
+def browserSession(binary, profile):
     #binary = browserVersion(browser)
     options = Options()
     #options.set_headless()
