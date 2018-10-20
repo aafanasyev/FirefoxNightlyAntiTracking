@@ -6,6 +6,7 @@
 #
 
 import os
+import sys
 from time import sleep
 from selenium import __version__
 from selenium.webdriver import Firefox
@@ -47,65 +48,140 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 # (2)Firefox Nightly Version 64.0a1
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 
-# Three cases: no TP (0), TP (1), TP and CB (2) 
 cases = ["no TP","TP","TP and CB"]
 
-for b in browsers:
-    # Firefox ESR Version 60.2.2"
-        if b == browsers[0]:
-        #Two cases no TP (0) and TP (1)
-        for c in cases:
-                # no TP
-                if c == cases[0]:
-                        path_to_browser = (('{0}/{1}').format(path_to_bin,browsers[b]))
-                        binary = FirefoxBinary(path_to_browser)
+def browsersProfiles(case):
+    profile = FirefoxProfile()
+    # no cache, accept all cookies
+    profile.set_preference("browser.cache.disk.enable", False)
+    profile.set_preference("browser.cache.disk_cache_ssl", False)
+    profile.set_preference("browser.cache.memory.enable", False)
+    profile.set_preference("browser.cache.offline.enable", False)
+    profile.set_preference("network.cookie.cookieBehavior", 0)
+    profile.set_preference("network.cookie.lifetimePolicy", 2)
+    profile.set_preference("places.history.enabled",False)
+    profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+    # No Tracking Protection
+    if case == "no TP":
+        # No Tracking Protection
+        profile.set_preference("privacy.trackingprotection.enabled", False)
+        #disable guidance
+        profile.set_preference("privacy.trackingprotection.introCount", 20)
+    #Tracking Protection
+    elif case == "TP":
+        # Tracking Protection
+        profile.set_preference("privacy.trackingprotection.enabled", True)
+        # Disable guidance
+        profile.set_preference("privacy.trackingprotection.introCount", 20)
+        # Content Blocking
+        profile.set_preference("browser.contentblocking.enabled", False)
+        profile.set_preference("browser.contentblocking.introCount", 20)
+    elif case == "TP and CB":
+        # Tracking Protection
+        profile.set_preference("privacy.trackingprotection.enabled", True)
+        # Disable guidance
+        profile.set_preference("privacy.trackingprotection.introCount", 20)
+        # Content Blocking
+        profile.set_preference("browser.contentblocking.enabled", True)
+        # Disable guidance
+        profile.set_preference("browser.contentblocking.introCount", 20)
+    return profile
 
-                        profile = FirefoxProfile()
+def browserVersion(browser):
+    path_to_bin = os.path.dirname(os.path.realpath(__file__))
+    path_to_browser = (('{0}/{1}').format(path_to_bin,browser))
+    binary = FirefoxBinary(path_to_browser)
+
+    return binary
+
+def sitesCookies(driver):
+    for site in sites:
+        print(site)
+        driver.get(site)
+        # 10 seconds to load page
+        sleep (10)
+        cookies = driver.get_cookies()
+        print (cookies)
+        #print('Amount of loaded cookies: {}' .format(len(cookies)))
+        return cookies
 
 
-                        #no tracking protection (by default) no cache, accept all cookies(Firefox 62.0.3 (64bit) default)
-                        profile.set_preference("browser.cache.disk.enable", False)
-                        profile.set_preference("browser.cache.disk_cache_ssl", False)
-                        profile.set_preference("browser.cache.memory.enable", False)
-                        profile.set_preference("browser.cache.offline.enable", False)
-                        profile.set_preference("network.cookie.cookieBehavior", 0)
-                        profile.set_preference("network.cookie.lifetimePolicy", 2)
-                        profile.set_preference("places.history.enabled",False)
-                        profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
-                elif c == cases[1]:
+for case in cases:
+    # Case 0 no Tracking protection
+    profile = browsersProfiles(case):
+    if case == "no TP":
+        # Browsers 
+        for browser in browsers:
+            binary = browserVersion(browser)
+            options = Options()
+            #options.set_headless()
 
-THINK GOOD ABOUT CASES AND BROWSERS!
-                
+            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
 
+            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
+            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
+            print("Selenium: {}".format(__version__))
+            print("no Tracking Protection")
+            print("================================")
+            print(sitesCookies(driver))
+            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
 
-        
+            driver.close()
+            driver.quit()
+            #wait 10 minutes
+            sleep(600)
+    elif case == "TP":
+        # Browsers 
+        for browser in browsers:
+            binary = browserVersion(browser)
+            options = Options()
+            #options.set_headless()
 
-path_to_browser = (('{0}/{1}').format(path_to_bin,browsers[b]))
-binary = FirefoxBinary(path_to_browser)
+            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
 
-profile = FirefoxProfile()
+            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
+            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
+            print("Selenium: {}".format(__version__))
+            print("no Tracking Protection")
+            print("================================")
+            print(sitesCookies(driver))
+            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
 
-#no tracking protection no cache, accept all cookies(Firefox 62.0.3 (64bit) default)
+            driver.close()
+            driver.quit()
+            #wait 10 minutes
+            sleep(600)
+    elif case == "TP and CB":
+        # Browsers 
+        for browser in browsers:
+            binary = browserVersion(browser)
+            options = Options()
+            #options.set_headless()
 
-profile.set_preference("browser.cache.disk.enable", False)
-profile.set_preference("browser.cache.disk_cache_ssl", False)
-profile.set_preference("browser.cache.memory.enable", False)
-profile.set_preference("browser.cache.offline.enable", False)
-profile.set_preference("network.cookie.cookieBehavior", 0)
-profile.set_preference("network.cookie.lifetimePolicy", 2)
-profile.set_preference("places.history.enabled",False)
-profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+            driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
 
-profile.set_preference("privacy.trackingprotection.enabled", True)
-#disable guidance
-profile.set_preference("privacy.trackingprotection.introCount", 20)
+            print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
+            print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
+            print("Selenium: {}".format(__version__))
+            print("no Tracking Protection")
+            print("================================")
+            print(sitesCookies(driver))
+            print('Amount of loaded cookies: {}' .format(len(sitesCookies(driver))))
+
+            driver.close()
+            driver.quit()
+            #wait 10 minutes
+            sleep(600)
+    else:
+        print("No case selected")
+        sys.exit()
 
 #Nightly content blocking
 #profile.set_preference("privacy.trackingprotection.enabled", False)
 #profile.set_preference("privacy.trackingprotection.introCount", 20)
 
-profile.set_preference("browser.contentblocking.enabled", False)
-profile.set_preference("browser.contentblocking.introCount", 20)
+#profile.set_preference("browser.contentblocking.enabled", False)
+#456profile.set_preference("browser.contentblocking.introCount", 20)
 
 
 #Slow-loading Trackers(By default enabled)
@@ -133,27 +209,3 @@ profile.set_preference("browser.contentblocking.introCount", 20)
 # Disable:
 #profile.set_preference("network.cookie.cookieBehavior", 0)
 
-
-
-options = Options()
-#options.set_headless()
-
-driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
-
-print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
-print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
-print("Selenium: {}".format(__version__))
-print("================================")
-
-for site in sites:
-    print(site)
-    driver.get(site)
-    sleep (10)
-    cookies = driver.get_cookies()
-    print (cookies)
-    print('Amount of loaded cookies: {}' .format(len(cookies)))
-
-
-#FFclearCache.clear_firefox_cache(driver)
-driver.close()
-driver.quit()

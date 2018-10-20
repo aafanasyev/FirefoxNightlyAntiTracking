@@ -1,15 +1,14 @@
 #!/bin/bash
 
-set -e
+#set -e
 
-echo "This script installs an Python 3 based environment (main.py) to test a new Firefox Nightly(64.0.1a) Anti-tracking approach."
+echo "This script installs a Python 3 based environment (main.py) to test a new Firefox Nightly(64.0.1a) Anti-tracking approach."
 
 OperatingSystem=$(uname -o)
 HardwarePlatform=$(uname -i)
 
 
-if [ $OperatingSystem != "GNU/Linux" ] || [ $HardwarePlatform != "x86_64" ]
-then
+if [ $OperatingSystem != "GNU/Linux" ] || [ $HardwarePlatform != "x86_64" ];then
    echo "Only Debian-based 64-bit distributions are supported, preferably Ubunutu 18.04 LTS"
    exit 1
 fi
@@ -20,7 +19,7 @@ sudo apt-get update; sudo apt-get upgrade -y; sudo apt-get dist-upgrade -y; sudo
 
 # INSTALL OS packages:
 
-sudo apt-get install -y firefox htop git python3-dev python3-pip libxml2-dev libxslt-dev libffi-dev libssl-dev build-essential xvfb libboost-python-dev libleveldb-dev libjpeg-dev curl wget
+sudo apt-get install -y firefox htop git python3-dev python3-pip libxml2-dev libxslt-dev libffi-dev libssl-dev build-essential xvfb libleveldb-dev libjpeg-dev sqlite3 sqlitebrowser curl wget
 
 
 # Python 3 modules:
@@ -66,8 +65,44 @@ sudo rm firefox-64.0a1.en-US.linux-x86_64.tar.bz2
 
 
 #INSTALL Microsoft Visual Code for development (OPTIONAL)
-sudo wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
-sudo apt install code -y
-code --install-extension ms-python.python 
-code --install-extension streetsidesoftware.code-spell-checker
+
+if [[ $# -gt 1 ]]; then
+    echo "Usage: install.sh [--vscode | --no-vscode]" >&2
+    exit 1
+fi
+
+if [[ $# -gt 0 ]]; then
+    case "$1" in
+        "--vscode")
+            vscode=true
+            ;;
+        "--no-vscode")
+            vscode=false
+            ;;
+        *)
+            echo "Usage: install.sh [--vscode | --no-vscode]" >&2
+            exit 1
+            ;;
+    esac
+else
+    echo "Would you like to install Microsoft Visual Studio Code? (Only required if no other IDE is installed) [y,N]"
+    read -s -n 1 response
+    if [[ $response = "" ]] || [ $response == 'n' ] || [ $response == 'N' ]; then
+        vscode=false
+        echo "Not installing Microsoft Visual Studio Code"
+    elif [ $response == 'y' ] || [ $response == 'Y' ]; then
+        vscode=true
+        echo "Installing Microsoft Visual Studio Code"
+    else
+        echo "Unrecognized response, exiting"
+        exit 1
+    fi
+fi
+
+if [ "$vscode" = true ]; then
+    sudo wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
+    sudo apt install code -y
+    code --install-extension ms-python.python 
+    code --install-extension streetsidesoftware.code-spell-checker
+fi
