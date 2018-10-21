@@ -30,7 +30,7 @@ sudo python3 -m pip install selenium pylint
 sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
 echo "Extracting:"
 sudo tar -zxf geckodriver-v0.23.0-linux64.tar.gz --checkpoint=.100
-echo "\nDone\n"
+echo "\n Done \n"
 sudo mv geckodriver /usr/local/bin
 sudo rm geckodriver-v0.23.0-linux64.tar.gz
 
@@ -39,7 +39,7 @@ sudo rm geckodriver-v0.23.0-linux64.tar.gz
 sudo wget https://ftp.mozilla.org/pub/firefox/releases/60.2.2esr/linux-x86_64/en-US/firefox-60.2.2esr.tar.bz2
 echo "Extracting:"
 sudo tar -jxf firefox-60.2.2esr.tar.bz2 --checkpoint=.100
-echo "\nDone\n"
+echo "\n Done \n"
 sudo rm -rf firefox-esr
 sudo mv firefox firefox-esr
 sudo rm firefox-60.2.2esr.tar.bz2
@@ -49,7 +49,7 @@ sudo rm firefox-60.2.2esr.tar.bz2
 sudo wget https://ftp.mozilla.org/pub/firefox/releases/62.0.3/linux-x86_64/en-US/firefox-62.0.3.tar.bz2
 echo "Extracting:"
 sudo tar -jxf firefox-62.0.3.tar.bz2 --checkpoint=.100
-echo "\nDone\n"
+echo "\n Done \n"
 sudo rm -rf firefox-release
 sudo mv firefox firefox-release
 sudo rm firefox-62.0.3.tar.bz2
@@ -58,7 +58,7 @@ sudo rm firefox-62.0.3.tar.bz2
 sudo wget https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/firefox-64.0a1.en-US.linux-x86_64.tar.bz2
 echo "Extracting:"
 sudo tar -jxf firefox-64.0a1.en-US.linux-x86_64.tar.bz2 --checkpoint=.100
-echo "\nDone\n"
+echo "\n Done \n"
 sudo rm -rf firefox-nightly
 sudo mv firefox firefox-nightly
 sudo rm firefox-64.0a1.en-US.linux-x86_64.tar.bz2
