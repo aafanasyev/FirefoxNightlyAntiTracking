@@ -128,6 +128,7 @@ def browserSession(binary, profile, usecase, experiment):
         cookies = driver.get_cookies()
         #print (cookies)
         print('Amount of loaded cookies: {}' .format(len(cookies)))
+        print(experiment)
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
 
     driver.close()
@@ -178,7 +179,7 @@ for experiment in range(experiments):
                     pass
         else:
             print("No usecase selected")
-    sys.exit()
+sys.exit()
 
 #Nightly content blocking
 #profile.set_preference("privacy.trackingprotection.enabled", False)
