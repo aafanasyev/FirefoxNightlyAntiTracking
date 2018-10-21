@@ -106,7 +106,7 @@ def browserSession(binary, profile):
     options = Options()
     #options.set_headless()
 
-    driver = Firefox(firefox_binary=binary, firefox_profile=profile, firefox_options=options)
+    driver = Firefox(firefox_binary=binary, firefox_profile=profile, options=options)
 
     print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
     print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
