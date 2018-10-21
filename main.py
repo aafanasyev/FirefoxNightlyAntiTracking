@@ -111,12 +111,12 @@ def browserSession(binary, profile):
     print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
     print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
     print("Selenium: {}".format(__version__))
- #   if case == "no TP":
- #       print("no Tracking Protection")
- #   elif case == "TP":
- #       print("Tracking Protection")
- #   elif case == "TP and CB":
- #       print("Tracking Protectionand and Content Blocking")
+    if case == "no TP":
+        print("no Tracking Protection")
+    elif case == "TP":
+        print("Tracking Protection")
+    elif case == "TP and CB":
+        print("Tracking Protectionand and Content Blocking")
     print("================================")
 
     for site in sites:
@@ -140,17 +140,17 @@ for case in cases:
     if case == "no TP":
         # Browsers 
         for browser in browsers:
-            print("no Tracking Protection")
+            #print("no Tracking Protection")
             browserSession(browserVersion(browser), browsersProfiles(case))
     elif case == "TP":
         # Browsers 
         for browser in browsers:
-            print("Tracking Protection")
+            #print("Tracking Protection")
             browserSession(browserVersion(browser), browsersProfiles(case))
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
-            print("Tracking Protectionand and Content Blocking")
+            #print("Tracking Protectionand and Content Blocking")
             browserSession(browserVersion(browser), browsersProfiles(case))
     else:
         print("No case selected")
