@@ -154,7 +154,7 @@ def write_measurements(path_csv, experiment, usecase, browserName, browserVersio
             writer.writerow(fields)
 
 
-for experiment in range(experiment):
+for experiment in range(experiments):
     for usecase in usecases:
         # usecase 0 no Tracking protection
         #profile = browsersProfiles(usecase)
