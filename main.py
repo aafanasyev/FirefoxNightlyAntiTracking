@@ -101,7 +101,7 @@ def sitesCookies(driver):
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
         return cookies
 
-def browserSession(binary, profile):
+def browserSession(binary, profile, case):
     #binary = browserVersion(browser)
     options = Options()
     #options.set_headless()
@@ -125,7 +125,7 @@ def browserSession(binary, profile):
         # 10 seconds to load page
         sleep (10)
         cookies = driver.get_cookies()
-        print (cookies)
+        #print (cookies)
         print('Amount of loaded cookies: {}' .format(len(cookies)))
 
     driver.close()
@@ -141,17 +141,17 @@ for case in cases:
         # Browsers 
         for browser in browsers:
             #print("no Tracking Protection")
-            browserSession(browserVersion(browser), browsersProfiles(case))
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     elif case == "TP":
         # Browsers 
         for browser in browsers:
             #print("Tracking Protection")
-            browserSession(browserVersion(browser), browsersProfiles(case))
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     elif case == "TP and CB":
         # Browsers 
         for browser in browsers:
             #print("Tracking Protectionand and Content Blocking")
-            browserSession(browserVersion(browser), browsersProfiles(case))
+            browserSession(browserVersion(browser), browsersProfiles(case), case)
     else:
         print("No case selected")
         sys.exit()
