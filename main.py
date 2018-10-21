@@ -45,7 +45,7 @@ browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/f
 usecases = ["no TP","TP","TP and CB"]
 sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
 experiments = 10
-path_csv = results.csv
+path_csv = "results.csv"
 
 def browsersProfiles(usecase):
     profile = FirefoxProfile()
