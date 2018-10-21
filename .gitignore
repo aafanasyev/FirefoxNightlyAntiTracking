@@ -2,4 +2,6 @@
 firefox-esr/
 firefox-release/
 firefox-nightly/
+dias/
 geckodriver.log
+results.db

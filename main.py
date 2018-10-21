@@ -7,6 +7,7 @@
 
 import os
 import sys
+import csv
 from time import sleep
 from selenium import __version__
 from selenium.webdriver import Firefox
@@ -21,7 +22,7 @@ print("Limitations are applied. Disk, memory, offline cache and history of")
 print("browsers are disabled. During browse session all cookies are accepted.")
 print("Content of cookies is saved. However, on close browser is sanitized but")
 
-print("Use cases:")
+print("Use usecases:")
 
 print("1 Firefox ESR Version 60.2.2")
 print("2 Firefox Release 62.0.3")
@@ -32,21 +33,21 @@ print("5 Firefox Release 62.0.3 with Tracking Protection(TP)")
 print("6 Firefox Nightly Version 64.0a1 with Tracking Protection(TP)") 
 print("7 Firefox Nightly Version 64.0a1 with Tracking Protectionand(TP) and Content Blocking(CB)")
 
-print("Experiment is about all cases above with waiting period\n for 10 minutes between each case ")
+print("Experiment is about all usecases above with waiting period\n for 10 minutes between each usecase ")
+
 
 path_to_bin = os.path.dirname(os.path.realpath(__file__))
-
 # Three browsers: 
 # (0)Firefox ESR Version 60.2.2
 # (1)Firefox Release 62.0.3
 # (2)Firefox Nightly Version 64.0a1
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
-
-cases = ["no TP","TP","TP and CB"]
-
+usecases = ["no TP","TP","TP and CB"]
 sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
+experiments = 10
+path_csv = results.csv
 
-def browsersProfiles(case):
+def browsersProfiles(usecase):
     profile = FirefoxProfile()
     # no cache, accept all cookies
     profile.set_preference("browser.cache.disk.enable", False)
@@ -58,13 +59,13 @@ def browsersProfiles(case):
     profile.set_preference("places.history.enabled",False)
     profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
     # No Tracking Protection
-    if case == "no TP":
+    if usecase == "no TP":
         # No Tracking Protection
         profile.set_preference("privacy.trackingprotection.enabled", False)
         #disable guidance
         profile.set_preference("privacy.trackingprotection.introCount", 20)
     #Tracking Protection
-    elif case == "TP":
+    elif usecase == "TP":
         # Tracking Protection
         profile.set_preference("privacy.trackingprotection.enabled", True)
         # Disable guidance
@@ -72,7 +73,7 @@ def browsersProfiles(case):
         # Content Blocking
         profile.set_preference("browser.contentblocking.enabled", False)
         profile.set_preference("browser.contentblocking.introCount", 20)
-    elif case == "TP and CB":
+    elif usecase == "TP and CB":
         # Tracking Protection
         profile.set_preference("privacy.trackingprotection.enabled", True)
         # Disable guidance
@@ -83,7 +84,7 @@ def browsersProfiles(case):
         profile.set_preference("browser.contentblocking.introCount", 20)
     return profile
 
-def browserVersion(browser):
+def browserBinary(browser):
     path_to_bin = os.path.dirname(os.path.realpath(__file__))
     path_to_browser = (('{0}/{1}').format(path_to_bin,browser))
     binary = FirefoxBinary(path_to_browser)
@@ -101,8 +102,8 @@ def sitesCookies(driver):
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
         return cookies
 
-def browserSession(binary, profile, case):
-    #binary = browserVersion(browser)
+def browserSession(binary, profile, usecase, experiment):
+    #binary = browserBinary(browser)
     options = Options()
     #options.set_headless()
 
@@ -111,11 +112,11 @@ def browserSession(binary, profile, case):
     print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
     print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
     print("Selenium: {}".format(__version__))
-    if case == "no TP":
+    if usecase == "no TP":
         print("no Tracking Protection")
-    elif case == "TP":
+    elif usecase == "TP":
         print("Tracking Protection")
-    elif case == "TP and CB":
+    elif usecase == "TP and CB":
         print("Tracking Protectionand and Content Blocking")
     print("================================")
 
@@ -127,34 +128,57 @@ def browserSession(binary, profile, case):
         cookies = driver.get_cookies()
         #print (cookies)
         print('Amount of loaded cookies: {}' .format(len(cookies)))
+        write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
 
     driver.close()
     driver.quit()
     #wait 10 minutes
     sleep(10)
 
+def write_measurements(path_csv, experiment, usecase, browserName, browserVersion, site, cookiesAmount):
+#writing results in to CSV
+    if ((not os.path.isfile(path_csv)) or (os.path.isfile(path_csv) and os.stat(path_csv).st_size==0) and (experiment == 0)):
+        with open(path_csv, 'w', encoding='utf-8') as results:
+            writer = csv.writer(results)
+            fields = ['Experiment', 'Use case', 'Browser Name', 'Browser Version', 'site', 'Amount of loaded cookies']
+            writer.writerow(fields)
 
-for case in cases:
-    # Case 0 no Tracking protection
-    #profile = browsersProfiles(case)
-    if case == "no TP":
-        # Browsers 
-        for browser in browsers:
-            #print("no Tracking Protection")
-            browserSession(browserVersion(browser), browsersProfiles(case), case)
-    elif case == "TP":
-        # Browsers 
-        for browser in browsers:
-            #print("Tracking Protection")
-            browserSession(browserVersion(browser), browsersProfiles(case), case)
-    elif case == "TP and CB":
-        # Browsers 
-        for browser in browsers:
-            #print("Tracking Protectionand and Content Blocking")
-            browserSession(browserVersion(browser), browsersProfiles(case), case)
+        with open(path_csv, 'a+', encoding='utf-8') as results:
+            writer = csv.writer(results)
+            fields = [experiment, usecase, browserName, browserVersion, site, cookiesAmount]
+            writer.writerow(fields)
     else:
-        print("No case selected")
-        sys.exit()
+        with open(path_csv, 'a+', encoding='utf-8') as results:
+            writer = csv.writer(results)
+            fields = [experiment, usecase, browserName, browserVersion, site, cookiesAmount]
+            writer.writerow(fields)
+
+
+for experiment in range(experiment):
+    for usecase in usecases:
+        # usecase 0 no Tracking protection
+        #profile = browsersProfiles(usecase)
+        if usecase == "no TP":
+            # Browsers 
+            for browser in browsers:
+                #print("no Tracking Protection")
+                browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
+        elif usecase == "TP":
+            # Browsers 
+            for browser in browsers:
+                #print("Tracking Protection")
+                browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
+        elif usecase == "TP and CB":
+            # Browsers 
+            for browser in browsers:
+                #print("Tracking Protectionand and Content Blocking")
+                if browser == "firefox-nightly/firefox":
+                    browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
+                else:
+                    pass
+        else:
+            print("No usecase selected")
+    sys.exit()
 
 #Nightly content blocking
 #profile.set_preference("privacy.trackingprotection.enabled", False)
@@ -169,10 +193,10 @@ for case in cases:
 
 # Block Trackers (by default on if contentblocking enabled)
 #>profile.set_preference("privacy.trackingprotection.enabled", True)
-# 1st default case: private 
+# 1st default usecase: private 
 #profile.set_preference("browser.privacy.trackingprotection.menu", "private")
 #>profile.set_preference("privacy.trackingprotection.enabled", False)
-# 2nd case: always
+# 2nd usecase: always
 #profile.set_preference("browser.privacy.trackingprotection.menu", "always")
 #profile.set_preference("privacy.trackingprotection.enabled", True)
 # Disable?
@@ -182,9 +206,9 @@ for case in cases:
 
 # Third-Party Cookies
 
-# 1st case: Trackers(recommended):
+# 1st usecase: Trackers(recommended):
 #profile.set_preference("network.cookie.cookieBehavior", 4)
-# 2nd case (All third-party cookies)
+# 2nd usecase (All third-party cookies)
 #profile.set_preference("network.cookie.cookieBehavior", 1)
 # Disable:
 #profile.set_preference("network.cookie.cookieBehavior", 0)
