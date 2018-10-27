@@ -166,7 +166,7 @@ def browserSession(binary, profile, usecase, experiment):
         driver.implicitly_wait(page_load_wait)
         #print (cookies)
         print("Amount of loaded cookies: {}" .format(len(cookies)))
-        print("Amount of loaded cookies: {}" .format(experiment))
+        print("Number of experiment: {}" .format(experiment))
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
     driver.close()
     driver.quit()
