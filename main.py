@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: UTF-8 -*-
+__author__ = "Andrey Afanasyev"
+__copyright__ = "Copyright 2018, FirefoxNightlyAntiTracking"
+__license__ = "MIT"
+__version__ = "0.0.2"
+__email__ = "aafanasyev@os3.nl"
+__status__ = "Prototype"
+
+
 
 #
 # https://wiki.mozilla.org/Security/Tracking_protection
@@ -58,21 +68,15 @@ def browsersProfiles(usecase):
     profile.set_preference("network.cookie.lifetimePolicy", 2)
     profile.set_preference("places.history.enabled",False)
     profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
-    # No Tracking Protection
-    if usecase == "no TP":
-        # No Tracking Protection
-        profile.set_preference("privacy.trackingprotection.enabled", False)
-        #disable guidance
-        profile.set_preference("privacy.trackingprotection.introCount", 20)
-    #Tracking Protection
-    elif usecase == "TP":
-        # Tracking Protection
+    # Tracking Protection
+    if usecase == "TP":
         profile.set_preference("privacy.trackingprotection.enabled", True)
         # Disable guidance
         profile.set_preference("privacy.trackingprotection.introCount", 20)
         # Content Blocking
         profile.set_preference("browser.contentblocking.enabled", False)
         profile.set_preference("browser.contentblocking.introCount", 20)
+    #Tracking Protection and Content Blocking
     elif usecase == "TP and CB":
         # Tracking Protection
         profile.set_preference("privacy.trackingprotection.enabled", True)
@@ -82,6 +86,16 @@ def browsersProfiles(usecase):
         profile.set_preference("browser.contentblocking.enabled", True)
         # Disable guidance
         profile.set_preference("browser.contentblocking.introCount", 20)
+    # No Tracking Protection
+    elif usecase == "no TP":
+        profile.set_preference("privacy.trackingprotection.enabled", False)
+        #disable guidance
+        profile.set_preference("privacy.trackingprotection.introCount", 20)
+        # Content Blocking
+        profile.set_preference("browser.contentblocking.enabled", False)
+        profile.set_preference("browser.contentblocking.introCount", 20)
+    else:
+        pass
     return profile
 
 def browserBinary(browser):
@@ -154,21 +168,16 @@ def write_measurements(path_csv, experiment, usecase, browserName, browserVersio
             fields = [experiment, usecase, browserName, browserVersion, site, cookiesAmount]
             writer.writerow(fields)
 
-
 for experiment in range(experiments):
     for usecase in usecases:
         # usecase 0 no Tracking protection
         #profile = browsersProfiles(usecase)
-        if usecase == "no TP":
+        if usecase == "TP":
             # Browsers 
             for browser in browsers:
                 #print("no Tracking Protection")
                 browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
-        elif usecase == "TP":
-            # Browsers 
-            for browser in browsers:
-                #print("Tracking Protection")
-                browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
+
         elif usecase == "TP and CB":
             # Browsers 
             for browser in browsers:
@@ -177,6 +186,12 @@ for experiment in range(experiments):
                     browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
                 else:
                     pass
+        elif usecase == "no TP":
+            # Browsers 
+            for browser in browsers:
+                #print("no Tracking Protection")
+                browserSession(browserBinary(browser), browsersProfiles(usecase), usecase, experiment)
+        
         else:
             print("No usecase selected")
 sys.exit()
