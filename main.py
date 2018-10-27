@@ -51,7 +51,23 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 # (2)Firefox Nightly Version 64.0a1
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 usecases = ["no TP","TP","TP and CB"]
-sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
+sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "ad.nl",
+         "https://tweakers.net/", "https://www.businessinsider.nl", 
+         "https://www.bloomberg.com/europe", "https://www.ft.com/",
+         "http://mareonline.nl/", "http://global.oup.com/?cc=nl",
+         "https://www.bepress.com/", "https://www.plusonline.nl/",
+         "https://www.buzzfeed.com/", "https://forbes.com/", 
+         "https://www.cosmopolitan.com/", "https://www.vice.com/nl",
+         "https://www.theguardian.com/", "https://www.hln.be",
+         "https://www.dailymail.co.uk/", "https://www.nytimes.com/",
+         "https://as.com/", "http://www.espn.com/", "https://www.marca.com/",
+         "https://racingnews365.nl/", "https://nl.hardware.info/", 
+         "https://computertotaal.nl", "https://www.cnet.com/"
+         "https://www.buienradar.nl/", "https://www.weeronline.nl/"
+         "https://www.accuweather.com/en/nl/netherlands-weather",
+         "https://knmi.nl/home", "https://www.weerplaza.nl/",
+         "https://nos.nl/", "https://www.nrc.nl/","https://www.volkskrant.nl/",
+         "https://www.trouw.nl/", "https://www.parool.nl/", "https://www.metronieuws.nl/"]
 experiments = 100
 path_csv = "results.csv"
 
