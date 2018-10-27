@@ -24,7 +24,7 @@ sudo apt-get install -y firefox htop git python3-dev python3-pip libxml2-dev lib
 
 # Python 3 modules:
 sudo python3 -m pip install --upgrade pip
-sudo python3 -m pip install selenium pylint
+sudo python3 -m pip install --upgrade selenium matplotlib pylint
 
 # INSTALL geckodriver
 sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
