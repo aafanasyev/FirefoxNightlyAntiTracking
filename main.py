@@ -8,7 +8,6 @@ __email__ = "aafanasyev@os3.nl"
 __status__ = "Prototype"
 
 
-
 #
 # https://wiki.mozilla.org/Security/Tracking_protection
 # http://kb.mozillazine.org/Category:Preferences
