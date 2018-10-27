@@ -43,12 +43,15 @@ print("7 Firefox Nightly Version 64.0a1 with Tracking Protectionand(TP) and Cont
 
 print("Experiment is about all usecases above with waiting period\n for 10 minutes between each usecase ")
 
+# number of sessions per each sites
+experiments = 10
 
 path_to_bin = os.path.dirname(os.path.realpath(__file__))
 # Three browsers: 
 # (0)Firefox ESR Version 60.2.2
 # (1)Firefox Release 62.0.3
 # (2)Firefox Nightly Version 64.0a1
+
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 usecases = ["no TP","TP","TP and CB"]
 sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "ad.nl",
@@ -68,12 +71,19 @@ sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "ad.nl",
          "https://knmi.nl/home", "https://www.weerplaza.nl/",
          "https://nos.nl/", "https://www.nrc.nl/","https://www.volkskrant.nl/",
          "https://www.trouw.nl/", "https://www.parool.nl/", "https://www.metronieuws.nl/"]
-experiments = 100
+
+# wait time in seconds
+page_load_wait = 10
+session_browser_wait = 180
 path_csv = "results.csv"
+
+# Set preference http://kb.mozillazine.org/Category:Preferences
 
 def browsersProfiles(usecase):
     profile = FirefoxProfile()
     # no cache, accept all cookies
+    profile.set_preference("app.update.enabled", False)
+    profile.set_preference("app.update.auto", False)
     profile.set_preference("browser.cache.disk.enable", False)
     profile.set_preference("browser.cache.disk_cache_ssl", False)
     profile.set_preference("browser.cache.memory.enable", False)
@@ -151,18 +161,17 @@ def browserSession(binary, profile, usecase, experiment):
     for site in sites:
         print(site)
         driver.get(site)
-        # 10 seconds to load page
-        sleep (10)
         cookies = driver.get_cookies()
+        # seconds to load page
+        driver.implicitly_wait(page_load_wait)
         #print (cookies)
         print('Amount of loaded cookies: {}' .format(len(cookies)))
         print(experiment)
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
-
-    driver.close()
+        driver.close()
     driver.quit()
-    #wait 10 minutes
-    sleep(10)
+    #wait before new browser session
+    sleep(session_browser_wait)
 
 def write_measurements(path_csv, experiment, usecase, browserName, browserVersion, site, cookiesAmount):
 #writing results in to CSV

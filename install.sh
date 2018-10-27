@@ -66,12 +66,12 @@ sudo rm firefox-64.0a1.en-US.linux-x86_64.tar.bz2
 
 #INSTALL Microsoft Visual Code for development (OPTIONAL)
 
-if [[ $# -gt 1 ]]; then
+if [ $# -gt 1 ]; then
     echo "Usage: install.sh [--vscode | --no-vscode]" >&2
     exit 1
 fi
 
-if [[ $# -gt 0 ]]; then
+if [ $# -gt 0 ]; then
     case "$1" in
         "--vscode")
             vscode=true
@@ -87,7 +87,7 @@ if [[ $# -gt 0 ]]; then
 else
     echo "Would you like to install Microsoft Visual Studio Code? (Only required if no other IDE is installed) [y,N]"
     read -s -n 1 response
-    if [[ $response = "" ]] || [ $response == 'n' ] || [ $response == 'N' ]; then
+    if [ $response = "" ] || [ $response == 'n' ] || [ $response == 'N' ]; then
         vscode=false
         echo "Not installing Microsoft Visual Studio Code"
     elif [ $response == 'y' ] || [ $response == 'Y' ]; then
