@@ -84,6 +84,8 @@ def browsersProfiles(usecase):
     # no cache, accept all cookies
     profile.set_preference("app.update.enabled", False)
     profile.set_preference("app.update.auto", False)
+    profile.set_preference("network.http.response.timeout", page_load_wait)
+    profile.set_preference("dom.max_script_run_time", page_load_wait)
     profile.set_preference("browser.cache.disk.enable", False)
     profile.set_preference("browser.cache.disk_cache_ssl", False)
     profile.set_preference("browser.cache.memory.enable", False)
@@ -141,7 +143,6 @@ def browserBinary(browser):
  #       return cookies
 
 def browserSession(binary, profile, usecase, experiment):
-    #binary = browserBinary(browser)
     options = Options()
     #options.set_headless()
 
@@ -157,18 +158,15 @@ def browserSession(binary, profile, usecase, experiment):
     elif usecase == "TP and CB":
         print("Tracking Protectionand and Content Blocking")
     print("================================")
-
-    for site in sites:
+    for site in sites:  
         print(site)
+        # seconds to load page
         driver.get(site)
         cookies = driver.get_cookies()
-        # seconds to load page
-        driver.implicitly_wait(page_load_wait)
         #print (cookies)
         print("Amount of loaded cookies: {}" .format(len(cookies)))
         print("Number of experiment: {}" .format(experiment))
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
-    driver.close()
     driver.quit()
     #wait before new browser session
     sleep(session_browser_wait)
