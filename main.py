@@ -13,7 +13,6 @@ __status__ = "Prototype"
 # https://wiki.mozilla.org/Security/Tracking_protection
 # http://kb.mozillazine.org/Category:Preferences
 #  
-#
 
 import os
 import sys
