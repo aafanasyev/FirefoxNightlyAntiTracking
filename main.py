@@ -54,22 +54,22 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 usecases = ["no TP","TP","TP and CB"]
-sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "ad.nl",
+sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "https://www.ad.nl/", 
          "https://tweakers.net/", "https://www.businessinsider.nl", 
-         "https://www.bloomberg.com/europe", "https://www.ft.com/",
-         "http://mareonline.nl/", "http://global.oup.com/?cc=nl",
-         "https://www.bepress.com/", "https://www.plusonline.nl/",
+         "https://www.bloomberg.com/europe", "https://www.ft.com/", 
+         "http://mareonline.nl/", "http://global.oup.com/?cc=nl", 
+         "https://www.bepress.com/", "https://www.plusonline.nl/", 
          "https://www.buzzfeed.com/", "https://forbes.com/", 
-         "https://www.cosmopolitan.com/", "https://www.vice.com/nl",
-         "https://www.theguardian.com/", "https://www.hln.be",
-         "https://www.dailymail.co.uk/", "https://www.nytimes.com/",
-         "https://as.com/", "http://www.espn.com/", "https://www.marca.com/",
+         "https://www.cosmopolitan.com/", "https://www.vice.com/nl", 
+         "https://www.theguardian.com/", "https://www.hln.be", 
+         "https://www.dailymail.co.uk/", "https://www.nytimes.com/", 
+         "https://as.com/", "http://www.espn.com/", "https://www.marca.com/", 
          "https://racingnews365.nl/", "https://nl.hardware.info/", 
-         "https://computertotaal.nl", "https://www.cnet.com/"
-         "https://www.buienradar.nl/", "https://www.weeronline.nl/"
-         "https://www.accuweather.com/en/nl/netherlands-weather",
-         "https://knmi.nl/home", "https://www.weerplaza.nl/",
-         "https://nos.nl/", "https://www.nrc.nl/","https://www.volkskrant.nl/",
+         "https://computertotaal.nl", "https://www.cnet.com/", 
+         "https://www.buienradar.nl/", "https://www.weeronline.nl/" 
+         "https://www.accuweather.com/en/nl/netherlands-weather", 
+         "https://knmi.nl/home", "https://www.weerplaza.nl/", 
+         "https://nos.nl/", "https://www.nrc.nl/", "https://www.volkskrant.nl/", 
          "https://www.trouw.nl/", "https://www.parool.nl/", "https://www.metronieuws.nl/"]
 
 # wait time in seconds
@@ -129,16 +129,16 @@ def browserBinary(browser):
 
     return binary
 
-def sitesCookies(driver):
-    for site in sites:
-        print(site)
-        driver.get(site)
+#def sitesCookies(driver):
+#    for site in sites:
+#        print(site)
+#        driver.get(site)
         # 10 seconds to load page
-        sleep (10)
-        cookies = driver.get_cookies()
-        print (cookies)
+ #       sleep (10)
+ #       cookies = driver.get_cookies()
+ #       print (cookies)
         #print('Amount of loaded cookies: {}' .format(len(cookies)))
-        return cookies
+ #       return cookies
 
 def browserSession(binary, profile, usecase, experiment):
     #binary = browserBinary(browser)
@@ -165,10 +165,10 @@ def browserSession(binary, profile, usecase, experiment):
         # seconds to load page
         driver.implicitly_wait(page_load_wait)
         #print (cookies)
-        print('Amount of loaded cookies: {}' .format(len(cookies)))
-        print(experiment)
+        print("Amount of loaded cookies: {}" .format(len(cookies)))
+        print("Amount of loaded cookies: {}" .format(experiment)
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
-        driver.close()
+    driver.close()
     driver.quit()
     #wait before new browser session
     sleep(session_browser_wait)
