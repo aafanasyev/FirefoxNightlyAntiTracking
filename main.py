@@ -52,7 +52,7 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
 usecases = ["no TP","TP","TP and CB"]
 sites = ["https://www.nu.nl/", "https://www.nos.nl/"]
-experiments = 10
+experiments = 100
 path_csv = "results.csv"
 
 def browsersProfiles(usecase):
