@@ -86,8 +86,8 @@ if [ $# -gt 0 ]; then
     esac
 else
     echo "Would you like to install Microsoft Visual Studio Code? (Only required if no other IDE is installed) [y,N]"
-    read -s -n 1 response
-    if [ $response = "" ] || [ $response == 'n' ] || [ $response == 'N' ]; then
+    read -n 1 response
+    if [ $response == "" ] || [ $response == 'n' ] || [ $response == 'N' ]; then
         vscode=false
         echo "Not installing Microsoft Visual Studio Code"
     elif [ $response == 'y' ] || [ $response == 'Y' ]; then
