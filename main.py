@@ -66,7 +66,7 @@ sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "https://www.ad.nl/"
          "https://as.com/", "http://www.espn.com/", "https://www.marca.com/", 
          "https://racingnews365.nl/", "https://nl.hardware.info/", 
          "https://computertotaal.nl", "https://www.cnet.com/", 
-         "https://www.buienradar.nl/", "https://www.weeronline.nl/" 
+         "https://www.buienradar.nl/", "https://www.weeronline.nl/", 
          "https://www.accuweather.com/en/nl/netherlands-weather", 
          "https://knmi.nl/home", "https://www.weerplaza.nl/", 
          "https://nos.nl/", "https://www.nrc.nl/", "https://www.volkskrant.nl/", 
