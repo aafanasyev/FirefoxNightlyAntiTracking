@@ -14,15 +14,5 @@ Selenium 3.14.1 and geckodriver 0.23.0 are required.
 
 
 # Installation
-use ```git clone https://github.com/aafanasyev/FirefoxNightlyAntiTracking.git``` 
-Get into directory and run install.sh. It has all required and optional components
-
-
-
-Python modules:
-```bash
-sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python get-pip.py 
-sudo python -m pip install pytest multiprocess pillow tblib selenium mini-amf bs4 publicsuffix pyvirtualdisplay tabulate plyvel boto3 pandas pyarrow s3fs psutil
-```
-
+Use ```git clone https://github.com/aafanasyev/FirefoxNightlyAntiTracking.git```  to get all files locally.
+Get into directory and run ```install.sh```. It has all required and optional components
