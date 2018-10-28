@@ -41,7 +41,7 @@ print("5 Firefox Release 62.0.3 with Tracking Protection(TP)")
 print("6 Firefox Nightly Version 64.0a1 with Tracking Protection(TP)") 
 print("7 Firefox Nightly Version 64.0a1 with Tracking Protectionand(TP) and Content Blocking(CB)")
 
-print("Experiment is about all usecases above with waiting period\n for 10 minutes between each usecase ")
+print("Experiment is about all usecases above with waiting period\n for 1 minute between each usecase ")
 
 # number of sessions per each sites
 experiments = 10
@@ -53,6 +53,7 @@ path_to_bin = os.path.dirname(os.path.realpath(__file__))
 # (2)Firefox Nightly Version 64.0a1
 
 browsers = ["firefox-esr/firefox", "firefox-release/firefox", "firefox-nightly/firefox"]
+#browsers = ["firefox-nightly/firefox"]
 usecases = ["no TP","TP","TP and CB"]
 sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "https://www.ad.nl/", 
          "https://tweakers.net/", "https://www.businessinsider.nl", 
@@ -60,38 +61,47 @@ sites = ["https://www.nu.nl/", "https://www.telegraaf.nl/", "https://www.ad.nl/"
          "http://mareonline.nl/", "http://global.oup.com/?cc=nl", 
          "https://www.bepress.com/", "https://www.plusonline.nl/", 
          "https://www.buzzfeed.com/", "https://forbes.com/", 
-         "https://www.cosmopolitan.com/", "https://www.vice.com/nl", 
+         "https://www.vice.com/nl", 
          "https://www.theguardian.com/", "https://www.hln.be", 
          "https://www.dailymail.co.uk/", "https://www.nytimes.com/", 
-         "https://as.com/", "http://www.espn.com/", "https://www.marca.com/", 
-         "https://racingnews365.nl/", "https://nl.hardware.info/", 
+         "https://as.com/", "http://www.espn.com/",
+         "https://nl.hardware.info/", 
          "https://computertotaal.nl", "https://www.cnet.com/", 
          "https://www.buienradar.nl/", "https://www.weeronline.nl/", 
          "https://www.accuweather.com/en/nl/netherlands-weather", 
          "https://knmi.nl/home", "https://www.weerplaza.nl/", 
          "https://nos.nl/", "https://www.nrc.nl/", "https://www.volkskrant.nl/", 
          "https://www.trouw.nl/", "https://www.parool.nl/", "https://www.metronieuws.nl/"]
+print(len(sites))
 
+#"https://www.cosmopolitan.com/",
 # wait time in seconds
 page_load_wait = 10
-session_browser_wait = 180
+session_browser_wait = 60
 path_csv = "results.csv"
 
 # Set preference http://kb.mozillazine.org/Category:Preferences
 
 def browsersProfiles(usecase):
     profile = FirefoxProfile()
-    # no cache, accept all cookies
+    # no update, page load time limit, no cache, accept all cookies
     profile.set_preference("app.update.enabled", False)
     profile.set_preference("app.update.auto", False)
+    
+    #profile.set_preference("network.http.max-connections", 48)
+    profile.set_preference("network.http.connection-timeout", page_load_wait)
+    profile.set_preference("network.http.connection-retry-timeout", page_load_wait)
     profile.set_preference("network.http.response.timeout", page_load_wait)
     profile.set_preference("dom.max_script_run_time", page_load_wait)
+    
     profile.set_preference("browser.cache.disk.enable", False)
     profile.set_preference("browser.cache.disk_cache_ssl", False)
     profile.set_preference("browser.cache.memory.enable", False)
     profile.set_preference("browser.cache.offline.enable", False)
+    
     profile.set_preference("network.cookie.cookieBehavior", 0)
     profile.set_preference("network.cookie.lifetimePolicy", 2)
+    
     profile.set_preference("places.history.enabled",False)
     profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
     # Tracking Protection
@@ -131,32 +141,16 @@ def browserBinary(browser):
 
     return binary
 
-#def sitesCookies(driver):
-#    for site in sites:
-#        print(site)
-#        driver.get(site)
-        # 10 seconds to load page
- #       sleep (10)
- #       cookies = driver.get_cookies()
- #       print (cookies)
-        #print('Amount of loaded cookies: {}' .format(len(cookies)))
- #       return cookies
-
 def browserSession(binary, profile, usecase, experiment):
     options = Options()
     #options.set_headless()
 
     driver = Firefox(firefox_binary=binary, firefox_profile=profile, options=options)
 
+    print("================================")
     print("{}: {}".format(driver.capabilities['browserName'],  driver.capabilities['browserVersion']))
     print("geckodriver: {}".format(driver.capabilities['moz:geckodriverVersion']))
     print("Selenium: {}".format(__version__))
-    if usecase == "no TP":
-        print("no Tracking Protection")
-    elif usecase == "TP":
-        print("Tracking Protection")
-    elif usecase == "TP and CB":
-        print("Tracking Protectionand and Content Blocking")
     print("================================")
     for site in sites:  
         print(site)
@@ -164,9 +158,11 @@ def browserSession(binary, profile, usecase, experiment):
         driver.get(site)
         cookies = driver.get_cookies()
         #print (cookies)
+        print("Experiment number: {}" .format(experiment))
+        print("Use case: {}".format(usecase))
         print("Amount of loaded cookies: {}" .format(len(cookies)))
-        print("Number of experiment: {}" .format(experiment))
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
+
     driver.quit()
     #wait before new browser session
     sleep(session_browser_wait)

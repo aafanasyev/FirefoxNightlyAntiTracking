@@ -1,141 +1,567 @@
 Experiment,Use case,Browser Name,Browser Version,site,Amount of loaded cookies
 0,no TP,firefox,60.2.2,https://www.nu.nl/,7
-0,no TP,firefox,60.2.2,https://www.nos.nl/,10
-0,no TP,firefox,62.0.3,https://www.nu.nl/,8
-0,no TP,firefox,62.0.3,https://www.nos.nl/,10
+0,no TP,firefox,60.2.2,https://www.telegraaf.nl/,1
+0,no TP,firefox,60.2.2,https://www.ad.nl/,4
+0,no TP,firefox,60.2.2,https://tweakers.net/,1
+0,no TP,firefox,60.2.2,https://www.businessinsider.nl,9
+0,no TP,firefox,60.2.2,https://www.bloomberg.com/europe,29
+0,no TP,firefox,60.2.2,https://www.ft.com/,4
+0,no TP,firefox,60.2.2,http://mareonline.nl/,4
+0,no TP,firefox,60.2.2,http://global.oup.com/?cc=nl,6
+0,no TP,firefox,60.2.2,https://www.bepress.com/,5
+0,no TP,firefox,60.2.2,https://www.plusonline.nl/,2
+0,no TP,firefox,60.2.2,https://www.buzzfeed.com/,32
+0,no TP,firefox,60.2.2,https://forbes.com/,1
+0,no TP,firefox,60.2.2,https://www.vice.com/nl,21
+0,no TP,firefox,60.2.2,https://www.theguardian.com/,8
+0,no TP,firefox,60.2.2,https://www.hln.be,1
+0,no TP,firefox,60.2.2,https://www.dailymail.co.uk/,11
+0,no TP,firefox,60.2.2,https://www.nytimes.com/,14
+0,no TP,firefox,60.2.2,https://as.com/,22
+0,no TP,firefox,60.2.2,http://www.espn.com/,19
+0,no TP,firefox,60.2.2,https://nl.hardware.info/,0
+0,no TP,firefox,60.2.2,https://computertotaal.nl,1
+0,no TP,firefox,60.2.2,https://www.cnet.com/,28
+0,no TP,firefox,60.2.2,https://www.buienradar.nl/,5
+0,no TP,firefox,60.2.2,https://www.weeronline.nl/,6
+0,no TP,firefox,60.2.2,https://www.accuweather.com/en/nl/netherlands-weather,20
+0,no TP,firefox,60.2.2,https://knmi.nl/home,4
+0,no TP,firefox,60.2.2,https://www.weerplaza.nl/,5
+0,no TP,firefox,60.2.2,https://nos.nl/,1
+0,no TP,firefox,60.2.2,https://www.nrc.nl/,10
+0,no TP,firefox,60.2.2,https://www.volkskrant.nl/,0
+0,no TP,firefox,60.2.2,https://www.trouw.nl/,1
+0,no TP,firefox,60.2.2,https://www.parool.nl/,1
+0,no TP,firefox,60.2.2,https://www.metronieuws.nl/,0
+0,no TP,firefox,62.0.3,https://www.nu.nl/,6
+0,no TP,firefox,62.0.3,https://www.telegraaf.nl/,1
+0,no TP,firefox,62.0.3,https://www.ad.nl/,4
+0,no TP,firefox,62.0.3,https://tweakers.net/,1
+0,no TP,firefox,62.0.3,https://www.businessinsider.nl,10
+0,no TP,firefox,62.0.3,https://www.bloomberg.com/europe,29
+0,no TP,firefox,62.0.3,https://www.ft.com/,4
+0,no TP,firefox,62.0.3,http://mareonline.nl/,4
+0,no TP,firefox,62.0.3,http://global.oup.com/?cc=nl,6
+0,no TP,firefox,62.0.3,https://www.bepress.com/,5
+0,no TP,firefox,62.0.3,https://www.plusonline.nl/,2
+0,no TP,firefox,62.0.3,https://www.buzzfeed.com/,32
+0,no TP,firefox,62.0.3,https://forbes.com/,1
+0,no TP,firefox,62.0.3,https://www.vice.com/nl,20
+0,no TP,firefox,62.0.3,https://www.theguardian.com/,8
+0,no TP,firefox,62.0.3,https://www.hln.be,4
+0,no TP,firefox,62.0.3,https://www.dailymail.co.uk/,11
+0,no TP,firefox,62.0.3,https://www.nytimes.com/,15
+0,no TP,firefox,62.0.3,https://as.com/,24
+0,no TP,firefox,62.0.3,http://www.espn.com/,19
+0,no TP,firefox,62.0.3,https://nl.hardware.info/,0
+0,no TP,firefox,62.0.3,https://computertotaal.nl,1
+0,no TP,firefox,62.0.3,https://www.cnet.com/,17
+0,no TP,firefox,62.0.3,https://www.buienradar.nl/,0
+0,no TP,firefox,62.0.3,https://www.weeronline.nl/,7
+0,no TP,firefox,62.0.3,https://www.accuweather.com/en/nl/netherlands-weather,18
+0,no TP,firefox,62.0.3,https://knmi.nl/home,4
+0,no TP,firefox,62.0.3,https://www.weerplaza.nl/,6
+0,no TP,firefox,62.0.3,https://nos.nl/,1
+0,no TP,firefox,62.0.3,https://www.nrc.nl/,10
+0,no TP,firefox,62.0.3,https://www.volkskrant.nl/,0
+0,no TP,firefox,62.0.3,https://www.trouw.nl/,1
+0,no TP,firefox,62.0.3,https://www.parool.nl/,1
+0,no TP,firefox,62.0.3,https://www.metronieuws.nl/,0
 0,no TP,firefox,64.0a1,https://www.nu.nl/,7
-0,no TP,firefox,64.0a1,https://www.nos.nl/,10
-0,TP,firefox,60.2.2,https://www.nu.nl/,8
-0,TP,firefox,60.2.2,https://www.nos.nl/,6
-0,TP,firefox,62.0.3,https://www.nu.nl/,6
-0,TP,firefox,62.0.3,https://www.nos.nl/,6
+0,no TP,firefox,64.0a1,https://www.telegraaf.nl/,1
+0,no TP,firefox,64.0a1,https://www.ad.nl/,4
+0,no TP,firefox,64.0a1,https://tweakers.net/,1
+0,no TP,firefox,64.0a1,https://www.businessinsider.nl,9
+0,no TP,firefox,64.0a1,https://www.bloomberg.com/europe,28
+0,no TP,firefox,64.0a1,https://www.ft.com/,4
+0,no TP,firefox,64.0a1,http://mareonline.nl/,4
+0,no TP,firefox,64.0a1,http://global.oup.com/?cc=nl,6
+0,no TP,firefox,64.0a1,https://www.bepress.com/,5
+0,no TP,firefox,64.0a1,https://www.plusonline.nl/,2
+0,no TP,firefox,64.0a1,https://www.buzzfeed.com/,32
+0,no TP,firefox,64.0a1,https://forbes.com/,1
+0,no TP,firefox,64.0a1,https://www.vice.com/nl,20
+0,no TP,firefox,64.0a1,https://www.theguardian.com/,8
+0,no TP,firefox,64.0a1,https://www.hln.be,4
+0,no TP,firefox,64.0a1,https://www.dailymail.co.uk/,11
+0,no TP,firefox,64.0a1,https://www.nytimes.com/,15
+0,no TP,firefox,64.0a1,https://as.com/,22
+0,no TP,firefox,64.0a1,http://www.espn.com/,29
+0,no TP,firefox,64.0a1,https://nl.hardware.info/,0
+0,no TP,firefox,64.0a1,https://computertotaal.nl,1
+0,no TP,firefox,64.0a1,https://www.cnet.com/,17
+0,no TP,firefox,64.0a1,https://www.buienradar.nl/,0
+0,no TP,firefox,64.0a1,https://www.weeronline.nl/,7
+0,no TP,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,19
+0,no TP,firefox,64.0a1,https://knmi.nl/home,4
+0,no TP,firefox,64.0a1,https://www.weerplaza.nl/,5
+0,no TP,firefox,64.0a1,https://nos.nl/,1
+0,no TP,firefox,64.0a1,https://www.nrc.nl/,10
+0,no TP,firefox,64.0a1,https://www.volkskrant.nl/,0
+0,no TP,firefox,64.0a1,https://www.trouw.nl/,1
+0,no TP,firefox,64.0a1,https://www.parool.nl/,1
+0,no TP,firefox,64.0a1,https://www.metronieuws.nl/,0
+0,TP,firefox,60.2.2,https://www.nu.nl/,7
+0,TP,firefox,60.2.2,https://www.telegraaf.nl/,1
+0,TP,firefox,60.2.2,https://www.ad.nl/,0
+0,TP,firefox,60.2.2,https://tweakers.net/,1
+0,TP,firefox,60.2.2,https://www.businessinsider.nl,3
+0,TP,firefox,60.2.2,https://www.bloomberg.com/europe,12
+0,TP,firefox,60.2.2,https://www.ft.com/,3
+0,TP,firefox,60.2.2,http://mareonline.nl/,1
+0,TP,firefox,60.2.2,http://global.oup.com/?cc=nl,2
+0,TP,firefox,60.2.2,https://www.bepress.com/,0
+0,TP,firefox,60.2.2,https://www.plusonline.nl/,0
+0,TP,firefox,60.2.2,https://www.buzzfeed.com/,26
+0,TP,firefox,60.2.2,https://forbes.com/,1
+0,TP,firefox,60.2.2,https://www.vice.com/nl,6
+0,TP,firefox,60.2.2,https://www.theguardian.com/,4
+0,TP,firefox,60.2.2,https://www.hln.be,0
+0,TP,firefox,60.2.2,https://www.dailymail.co.uk/,6
+0,TP,firefox,60.2.2,https://www.nytimes.com/,5
+0,TP,firefox,60.2.2,https://as.com/,16
+0,TP,firefox,60.2.2,http://www.espn.com/,15
+0,TP,firefox,60.2.2,https://nl.hardware.info/,0
+0,TP,firefox,60.2.2,https://computertotaal.nl,1
+0,TP,firefox,60.2.2,https://www.cnet.com/,4
+0,TP,firefox,60.2.2,https://www.buienradar.nl/,0
+0,TP,firefox,60.2.2,https://www.weeronline.nl/,1
+0,TP,firefox,60.2.2,https://www.accuweather.com/en/nl/netherlands-weather,15
+0,TP,firefox,60.2.2,https://knmi.nl/home,2
+0,TP,firefox,60.2.2,https://www.weerplaza.nl/,2
+0,TP,firefox,60.2.2,https://nos.nl/,0
+0,TP,firefox,60.2.2,https://www.nrc.nl/,2
+0,TP,firefox,60.2.2,https://www.volkskrant.nl/,0
+0,TP,firefox,60.2.2,https://www.trouw.nl/,1
+0,TP,firefox,60.2.2,https://www.parool.nl/,1
+0,TP,firefox,60.2.2,https://www.metronieuws.nl/,0
+0,TP,firefox,62.0.3,https://www.nu.nl/,5
+0,TP,firefox,62.0.3,https://www.telegraaf.nl/,1
+0,TP,firefox,62.0.3,https://www.ad.nl/,0
+0,TP,firefox,62.0.3,https://tweakers.net/,1
+0,TP,firefox,62.0.3,https://www.businessinsider.nl,3
+0,TP,firefox,62.0.3,https://www.bloomberg.com/europe,12
+0,TP,firefox,62.0.3,https://www.ft.com/,3
+0,TP,firefox,62.0.3,http://mareonline.nl/,1
+0,TP,firefox,62.0.3,http://global.oup.com/?cc=nl,2
+0,TP,firefox,62.0.3,https://www.bepress.com/,0
+0,TP,firefox,62.0.3,https://www.plusonline.nl/,0
+0,TP,firefox,62.0.3,https://www.buzzfeed.com/,28
+0,TP,firefox,62.0.3,https://forbes.com/,1
+0,TP,firefox,62.0.3,https://www.vice.com/nl,6
+0,TP,firefox,62.0.3,https://www.theguardian.com/,4
+0,TP,firefox,62.0.3,https://www.hln.be,0
+0,TP,firefox,62.0.3,https://www.dailymail.co.uk/,6
+0,TP,firefox,62.0.3,https://www.nytimes.com/,5
+0,TP,firefox,62.0.3,https://as.com/,16
+0,TP,firefox,62.0.3,http://www.espn.com/,15
+0,TP,firefox,62.0.3,https://nl.hardware.info/,0
+0,TP,firefox,62.0.3,https://computertotaal.nl,1
+0,TP,firefox,62.0.3,https://www.cnet.com/,4
+0,TP,firefox,62.0.3,https://www.buienradar.nl/,0
+0,TP,firefox,62.0.3,https://www.weeronline.nl/,1
+0,TP,firefox,62.0.3,https://www.accuweather.com/en/nl/netherlands-weather,16
+0,TP,firefox,62.0.3,https://knmi.nl/home,2
+0,TP,firefox,62.0.3,https://www.weerplaza.nl/,2
+0,TP,firefox,62.0.3,https://nos.nl/,6
+0,TP,firefox,62.0.3,https://www.nrc.nl/,2
+0,TP,firefox,62.0.3,https://www.volkskrant.nl/,0
+0,TP,firefox,62.0.3,https://www.trouw.nl/,1
+0,TP,firefox,62.0.3,https://www.parool.nl/,1
+0,TP,firefox,62.0.3,https://www.metronieuws.nl/,0
 0,TP,firefox,64.0a1,https://www.nu.nl/,7
-0,TP,firefox,64.0a1,https://www.nos.nl/,10
-0,TP and CB,firefox,64.0a1,https://www.nu.nl/,8
-0,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-1,no TP,firefox,60.2.2,https://www.nu.nl/,8
-1,no TP,firefox,60.2.2,https://www.nos.nl/,10
-1,no TP,firefox,62.0.3,https://www.nu.nl/,8
-1,no TP,firefox,62.0.3,https://www.nos.nl/,10
+0,TP,firefox,64.0a1,https://www.telegraaf.nl/,1
+0,TP,firefox,64.0a1,https://www.ad.nl/,4
+0,TP,firefox,64.0a1,https://tweakers.net/,1
+0,TP,firefox,64.0a1,https://www.businessinsider.nl,9
+0,TP,firefox,64.0a1,https://www.bloomberg.com/europe,29
+0,TP,firefox,64.0a1,https://www.ft.com/,4
+0,TP,firefox,64.0a1,http://mareonline.nl/,4
+0,TP,firefox,64.0a1,http://global.oup.com/?cc=nl,6
+0,TP,firefox,64.0a1,https://www.bepress.com/,5
+0,TP,firefox,64.0a1,https://www.plusonline.nl/,2
+0,TP,firefox,64.0a1,https://www.buzzfeed.com/,32
+0,TP,firefox,64.0a1,https://forbes.com/,1
+0,TP,firefox,64.0a1,https://www.vice.com/nl,22
+0,TP,firefox,64.0a1,https://www.theguardian.com/,8
+0,TP,firefox,64.0a1,https://www.hln.be,4
+0,TP,firefox,64.0a1,https://www.dailymail.co.uk/,11
+0,TP,firefox,64.0a1,https://www.nytimes.com/,15
+0,TP,firefox,64.0a1,https://as.com/,22
+0,TP,firefox,64.0a1,http://www.espn.com/,23
+0,TP,firefox,64.0a1,https://nl.hardware.info/,0
+0,TP,firefox,64.0a1,https://computertotaal.nl,1
+0,TP,firefox,64.0a1,https://www.cnet.com/,31
+0,TP,firefox,64.0a1,https://www.buienradar.nl/,7
+0,TP,firefox,64.0a1,https://www.weeronline.nl/,7
+0,TP,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,19
+0,TP,firefox,64.0a1,https://knmi.nl/home,4
+0,TP,firefox,64.0a1,https://www.weerplaza.nl/,5
+0,TP,firefox,64.0a1,https://nos.nl/,1
+0,TP,firefox,64.0a1,https://www.nrc.nl/,9
+0,TP,firefox,64.0a1,https://www.volkskrant.nl/,0
+0,TP,firefox,64.0a1,https://www.trouw.nl/,1
+0,TP,firefox,64.0a1,https://www.parool.nl/,1
+0,TP,firefox,64.0a1,https://www.metronieuws.nl/,0
+0,TP and CB,firefox,64.0a1,https://www.nu.nl/,5
+0,TP and CB,firefox,64.0a1,https://www.telegraaf.nl/,1
+0,TP and CB,firefox,64.0a1,https://www.ad.nl/,0
+0,TP and CB,firefox,64.0a1,https://tweakers.net/,1
+0,TP and CB,firefox,64.0a1,https://www.businessinsider.nl,3
+0,TP and CB,firefox,64.0a1,https://www.bloomberg.com/europe,13
+0,TP and CB,firefox,64.0a1,https://www.ft.com/,3
+0,TP and CB,firefox,64.0a1,http://mareonline.nl/,1
+0,TP and CB,firefox,64.0a1,http://global.oup.com/?cc=nl,1
+0,TP and CB,firefox,64.0a1,https://www.bepress.com/,0
+0,TP and CB,firefox,64.0a1,https://www.plusonline.nl/,0
+0,TP and CB,firefox,64.0a1,https://www.buzzfeed.com/,26
+0,TP and CB,firefox,64.0a1,https://forbes.com/,1
+0,TP and CB,firefox,64.0a1,https://www.vice.com/nl,6
+0,TP and CB,firefox,64.0a1,https://www.theguardian.com/,4
+0,TP and CB,firefox,64.0a1,https://www.hln.be,0
+0,TP and CB,firefox,64.0a1,https://www.dailymail.co.uk/,6
+0,TP and CB,firefox,64.0a1,https://www.nytimes.com/,5
+0,TP and CB,firefox,64.0a1,https://as.com/,16
+0,TP and CB,firefox,64.0a1,http://www.espn.com/,26
+0,TP and CB,firefox,64.0a1,https://nl.hardware.info/,0
+0,TP and CB,firefox,64.0a1,https://computertotaal.nl,1
+0,TP and CB,firefox,64.0a1,https://www.cnet.com/,4
+0,TP and CB,firefox,64.0a1,https://www.buienradar.nl/,5
+0,TP and CB,firefox,64.0a1,https://www.weeronline.nl/,1
+0,TP and CB,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,15
+0,TP and CB,firefox,64.0a1,https://knmi.nl/home,1
+0,TP and CB,firefox,64.0a1,https://www.weerplaza.nl/,2
+0,TP and CB,firefox,64.0a1,https://nos.nl/,0
+0,TP and CB,firefox,64.0a1,https://www.nrc.nl/,2
+0,TP and CB,firefox,64.0a1,https://www.volkskrant.nl/,0
+0,TP and CB,firefox,64.0a1,https://www.trouw.nl/,1
+0,TP and CB,firefox,64.0a1,https://www.parool.nl/,1
+0,TP and CB,firefox,64.0a1,https://www.metronieuws.nl/,0
+1,no TP,firefox,60.2.2,https://www.nu.nl/,7
+1,no TP,firefox,60.2.2,https://www.telegraaf.nl/,1
+1,no TP,firefox,60.2.2,https://www.ad.nl/,4
+1,no TP,firefox,60.2.2,https://tweakers.net/,1
+1,no TP,firefox,60.2.2,https://www.businessinsider.nl,10
+1,no TP,firefox,60.2.2,https://www.bloomberg.com/europe,30
+1,no TP,firefox,60.2.2,https://www.ft.com/,4
+1,no TP,firefox,60.2.2,http://mareonline.nl/,4
+1,no TP,firefox,60.2.2,http://global.oup.com/?cc=nl,6
+1,no TP,firefox,60.2.2,https://www.bepress.com/,5
+1,no TP,firefox,60.2.2,https://www.plusonline.nl/,2
+1,no TP,firefox,60.2.2,https://www.buzzfeed.com/,32
+1,no TP,firefox,60.2.2,https://forbes.com/,1
+1,no TP,firefox,60.2.2,https://www.vice.com/nl,21
+1,no TP,firefox,60.2.2,https://www.theguardian.com/,8
+1,no TP,firefox,60.2.2,https://www.hln.be,4
+1,no TP,firefox,60.2.2,https://www.dailymail.co.uk/,12
+1,no TP,firefox,60.2.2,https://www.nytimes.com/,15
+1,no TP,firefox,60.2.2,https://as.com/,22
+1,no TP,firefox,60.2.2,http://www.espn.com/,18
+1,no TP,firefox,60.2.2,https://nl.hardware.info/,0
+1,no TP,firefox,60.2.2,https://computertotaal.nl,1
+1,no TP,firefox,60.2.2,https://www.cnet.com/,15
+1,no TP,firefox,60.2.2,https://www.buienradar.nl/,5
+1,no TP,firefox,60.2.2,https://www.weeronline.nl/,6
+1,no TP,firefox,60.2.2,https://www.accuweather.com/en/nl/netherlands-weather,18
+1,no TP,firefox,60.2.2,https://knmi.nl/home,4
+1,no TP,firefox,60.2.2,https://www.weerplaza.nl/,5
+1,no TP,firefox,60.2.2,https://nos.nl/,1
+1,no TP,firefox,60.2.2,https://www.nrc.nl/,9
+1,no TP,firefox,60.2.2,https://www.volkskrant.nl/,0
+1,no TP,firefox,60.2.2,https://www.trouw.nl/,1
+1,no TP,firefox,60.2.2,https://www.parool.nl/,1
+1,no TP,firefox,60.2.2,https://www.metronieuws.nl/,0
+1,no TP,firefox,62.0.3,https://www.nu.nl/,7
+1,no TP,firefox,62.0.3,https://www.telegraaf.nl/,1
+1,no TP,firefox,62.0.3,https://www.ad.nl/,4
+1,no TP,firefox,62.0.3,https://tweakers.net/,1
+1,no TP,firefox,62.0.3,https://www.businessinsider.nl,10
+1,no TP,firefox,62.0.3,https://www.bloomberg.com/europe,29
+1,no TP,firefox,62.0.3,https://www.ft.com/,4
+1,no TP,firefox,62.0.3,http://mareonline.nl/,4
+1,no TP,firefox,62.0.3,http://global.oup.com/?cc=nl,6
+1,no TP,firefox,62.0.3,https://www.bepress.com/,5
+1,no TP,firefox,62.0.3,https://www.plusonline.nl/,2
+1,no TP,firefox,62.0.3,https://www.buzzfeed.com/,30
+1,no TP,firefox,62.0.3,https://forbes.com/,1
+1,no TP,firefox,62.0.3,https://www.vice.com/nl,21
+1,no TP,firefox,62.0.3,https://www.theguardian.com/,8
+1,no TP,firefox,62.0.3,https://www.hln.be,3
+1,no TP,firefox,62.0.3,https://www.dailymail.co.uk/,11
+1,no TP,firefox,62.0.3,https://www.nytimes.com/,15
+1,no TP,firefox,62.0.3,https://as.com/,23
+1,no TP,firefox,62.0.3,http://www.espn.com/,19
+1,no TP,firefox,62.0.3,https://nl.hardware.info/,0
+1,no TP,firefox,62.0.3,https://computertotaal.nl,1
+1,no TP,firefox,62.0.3,https://www.cnet.com/,31
+1,no TP,firefox,62.0.3,https://www.buienradar.nl/,0
+1,no TP,firefox,62.0.3,https://www.weeronline.nl/,7
+1,no TP,firefox,62.0.3,https://www.accuweather.com/en/nl/netherlands-weather,19
+1,no TP,firefox,62.0.3,https://knmi.nl/home,4
+1,no TP,firefox,62.0.3,https://www.weerplaza.nl/,6
+1,no TP,firefox,62.0.3,https://nos.nl/,1
+1,no TP,firefox,62.0.3,https://www.nrc.nl/,10
+1,no TP,firefox,62.0.3,https://www.volkskrant.nl/,0
+1,no TP,firefox,62.0.3,https://www.trouw.nl/,1
+1,no TP,firefox,62.0.3,https://www.parool.nl/,1
+1,no TP,firefox,62.0.3,https://www.metronieuws.nl/,0
 1,no TP,firefox,64.0a1,https://www.nu.nl/,7
-1,no TP,firefox,64.0a1,https://www.nos.nl/,10
-1,TP,firefox,60.2.2,https://www.nu.nl/,8
-1,TP,firefox,60.2.2,https://www.nos.nl/,6
+1,no TP,firefox,64.0a1,https://www.telegraaf.nl/,1
+1,no TP,firefox,64.0a1,https://www.ad.nl/,4
+1,no TP,firefox,64.0a1,https://tweakers.net/,2
+1,no TP,firefox,64.0a1,https://www.businessinsider.nl,9
+1,no TP,firefox,64.0a1,https://www.bloomberg.com/europe,29
+1,no TP,firefox,64.0a1,https://www.ft.com/,4
+1,no TP,firefox,64.0a1,http://mareonline.nl/,4
+1,no TP,firefox,64.0a1,http://global.oup.com/?cc=nl,6
+1,no TP,firefox,64.0a1,https://www.bepress.com/,5
+1,no TP,firefox,64.0a1,https://www.plusonline.nl/,2
+1,no TP,firefox,64.0a1,https://www.buzzfeed.com/,30
+1,no TP,firefox,64.0a1,https://forbes.com/,1
+1,no TP,firefox,64.0a1,https://www.vice.com/nl,22
+1,no TP,firefox,64.0a1,https://www.theguardian.com/,8
+1,no TP,firefox,64.0a1,https://www.hln.be,4
+1,no TP,firefox,64.0a1,https://www.dailymail.co.uk/,11
+1,no TP,firefox,64.0a1,https://www.nytimes.com/,15
+1,no TP,firefox,64.0a1,https://as.com/,21
+1,no TP,firefox,64.0a1,http://www.espn.com/,29
+1,no TP,firefox,64.0a1,https://nl.hardware.info/,0
+1,no TP,firefox,64.0a1,https://computertotaal.nl,1
+1,no TP,firefox,64.0a1,https://www.cnet.com/,6
+1,no TP,firefox,64.0a1,https://www.buienradar.nl/,5
+1,no TP,firefox,64.0a1,https://www.weeronline.nl/,7
+1,no TP,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,18
+1,no TP,firefox,64.0a1,https://knmi.nl/home,4
+1,no TP,firefox,64.0a1,https://www.weerplaza.nl/,5
+1,no TP,firefox,64.0a1,https://nos.nl/,10
+1,no TP,firefox,64.0a1,https://www.nrc.nl/,10
+1,no TP,firefox,64.0a1,https://www.volkskrant.nl/,0
+1,no TP,firefox,64.0a1,https://www.trouw.nl/,1
+1,no TP,firefox,64.0a1,https://www.parool.nl/,1
+1,no TP,firefox,64.0a1,https://www.metronieuws.nl/,0
+1,TP,firefox,60.2.2,https://www.nu.nl/,5
+1,TP,firefox,60.2.2,https://www.telegraaf.nl/,1
+1,TP,firefox,60.2.2,https://www.ad.nl/,0
+1,TP,firefox,60.2.2,https://tweakers.net/,1
+1,TP,firefox,60.2.2,https://www.businessinsider.nl,3
+1,TP,firefox,60.2.2,https://www.bloomberg.com/europe,12
+1,TP,firefox,60.2.2,https://www.ft.com/,3
+1,TP,firefox,60.2.2,http://mareonline.nl/,1
+1,TP,firefox,60.2.2,http://global.oup.com/?cc=nl,1
+1,TP,firefox,60.2.2,https://www.bepress.com/,0
+1,TP,firefox,60.2.2,https://www.plusonline.nl/,0
+1,TP,firefox,60.2.2,https://www.buzzfeed.com/,26
+1,TP,firefox,60.2.2,https://forbes.com/,1
+1,TP,firefox,60.2.2,https://www.vice.com/nl,6
+1,TP,firefox,60.2.2,https://www.theguardian.com/,4
+1,TP,firefox,60.2.2,https://www.hln.be,0
+1,TP,firefox,60.2.2,https://www.dailymail.co.uk/,6
+1,TP,firefox,60.2.2,https://www.nytimes.com/,5
+1,TP,firefox,60.2.2,https://as.com/,16
+1,TP,firefox,60.2.2,http://www.espn.com/,26
+1,TP,firefox,60.2.2,https://nl.hardware.info/,0
+1,TP,firefox,60.2.2,https://computertotaal.nl,1
+1,TP,firefox,60.2.2,https://www.cnet.com/,4
+1,TP,firefox,60.2.2,https://www.buienradar.nl/,2
+1,TP,firefox,60.2.2,https://www.weeronline.nl/,1
+1,TP,firefox,60.2.2,https://www.accuweather.com/en/nl/netherlands-weather,16
+1,TP,firefox,60.2.2,https://knmi.nl/home,1
+1,TP,firefox,60.2.2,https://www.weerplaza.nl/,2
+1,TP,firefox,60.2.2,https://nos.nl/,0
+1,TP,firefox,60.2.2,https://www.nrc.nl/,2
+1,TP,firefox,60.2.2,https://www.volkskrant.nl/,0
+1,TP,firefox,60.2.2,https://www.trouw.nl/,1
+1,TP,firefox,60.2.2,https://www.parool.nl/,1
+1,TP,firefox,60.2.2,https://www.metronieuws.nl/,0
 1,TP,firefox,62.0.3,https://www.nu.nl/,7
-1,TP,firefox,62.0.3,https://www.nos.nl/,6
-1,TP,firefox,64.0a1,https://www.nu.nl/,8
-1,TP,firefox,64.0a1,https://www.nos.nl/,10
+1,TP,firefox,62.0.3,https://www.telegraaf.nl/,1
+1,TP,firefox,62.0.3,https://www.ad.nl/,0
+1,TP,firefox,62.0.3,https://tweakers.net/,1
+1,TP,firefox,62.0.3,https://www.businessinsider.nl,3
+1,TP,firefox,62.0.3,https://www.bloomberg.com/europe,12
+1,TP,firefox,62.0.3,https://www.ft.com/,3
+1,TP,firefox,62.0.3,http://mareonline.nl/,1
+1,TP,firefox,62.0.3,http://global.oup.com/?cc=nl,2
+1,TP,firefox,62.0.3,https://www.bepress.com/,0
+1,TP,firefox,62.0.3,https://www.plusonline.nl/,0
+1,TP,firefox,62.0.3,https://www.buzzfeed.com/,28
+1,TP,firefox,62.0.3,https://forbes.com/,1
+1,TP,firefox,62.0.3,https://www.vice.com/nl,6
+1,TP,firefox,62.0.3,https://www.theguardian.com/,4
+1,TP,firefox,62.0.3,https://www.hln.be,0
+1,TP,firefox,62.0.3,https://www.dailymail.co.uk/,6
+1,TP,firefox,62.0.3,https://www.nytimes.com/,5
+1,TP,firefox,62.0.3,https://as.com/,16
+1,TP,firefox,62.0.3,http://www.espn.com/,26
+1,TP,firefox,62.0.3,https://nl.hardware.info/,0
+1,TP,firefox,62.0.3,https://computertotaal.nl,1
+1,TP,firefox,62.0.3,https://www.cnet.com/,4
+1,TP,firefox,62.0.3,https://www.buienradar.nl/,2
+1,TP,firefox,62.0.3,https://www.weeronline.nl/,1
+1,TP,firefox,62.0.3,https://www.accuweather.com/en/nl/netherlands-weather,15
+1,TP,firefox,62.0.3,https://knmi.nl/home,1
+1,TP,firefox,62.0.3,https://www.weerplaza.nl/,2
+1,TP,firefox,62.0.3,https://nos.nl/,0
+1,TP,firefox,62.0.3,https://www.nrc.nl/,2
+1,TP,firefox,62.0.3,https://www.volkskrant.nl/,0
+1,TP,firefox,62.0.3,https://www.trouw.nl/,1
+1,TP,firefox,62.0.3,https://www.parool.nl/,1
+1,TP,firefox,62.0.3,https://www.metronieuws.nl/,0
+1,TP,firefox,64.0a1,https://www.nu.nl/,7
+1,TP,firefox,64.0a1,https://www.telegraaf.nl/,1
+1,TP,firefox,64.0a1,https://www.ad.nl/,4
+1,TP,firefox,64.0a1,https://tweakers.net/,1
+1,TP,firefox,64.0a1,https://www.businessinsider.nl,9
+1,TP,firefox,64.0a1,https://www.bloomberg.com/europe,29
+1,TP,firefox,64.0a1,https://www.ft.com/,4
+1,TP,firefox,64.0a1,http://mareonline.nl/,4
+1,TP,firefox,64.0a1,http://global.oup.com/?cc=nl,6
+1,TP,firefox,64.0a1,https://www.bepress.com/,5
+1,TP,firefox,64.0a1,https://www.plusonline.nl/,2
+1,TP,firefox,64.0a1,https://www.buzzfeed.com/,30
+1,TP,firefox,64.0a1,https://forbes.com/,1
+1,TP,firefox,64.0a1,https://www.vice.com/nl,21
+1,TP,firefox,64.0a1,https://www.theguardian.com/,8
+1,TP,firefox,64.0a1,https://www.hln.be,4
+1,TP,firefox,64.0a1,https://www.dailymail.co.uk/,11
+1,TP,firefox,64.0a1,https://www.nytimes.com/,15
+1,TP,firefox,64.0a1,https://as.com/,22
+1,TP,firefox,64.0a1,http://www.espn.com/,18
+1,TP,firefox,64.0a1,https://nl.hardware.info/,0
+1,TP,firefox,64.0a1,https://computertotaal.nl,1
+1,TP,firefox,64.0a1,https://www.cnet.com/,31
+1,TP,firefox,64.0a1,https://www.buienradar.nl/,0
+1,TP,firefox,64.0a1,https://www.weeronline.nl/,7
+1,TP,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,19
+1,TP,firefox,64.0a1,https://knmi.nl/home,5
+1,TP,firefox,64.0a1,https://www.weerplaza.nl/,5
+1,TP,firefox,64.0a1,https://nos.nl/,2
+1,TP,firefox,64.0a1,https://www.nrc.nl/,9
+1,TP,firefox,64.0a1,https://www.volkskrant.nl/,0
+1,TP,firefox,64.0a1,https://www.trouw.nl/,1
+1,TP,firefox,64.0a1,https://www.parool.nl/,1
+1,TP,firefox,64.0a1,https://www.metronieuws.nl/,0
 1,TP and CB,firefox,64.0a1,https://www.nu.nl/,7
-1,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-2,no TP,firefox,60.2.2,https://www.nu.nl/,8
-2,no TP,firefox,60.2.2,https://www.nos.nl/,10
-2,no TP,firefox,62.0.3,https://www.nu.nl/,8
-2,no TP,firefox,62.0.3,https://www.nos.nl/,10
+1,TP and CB,firefox,64.0a1,https://www.telegraaf.nl/,1
+1,TP and CB,firefox,64.0a1,https://www.ad.nl/,0
+1,TP and CB,firefox,64.0a1,https://tweakers.net/,1
+1,TP and CB,firefox,64.0a1,https://www.businessinsider.nl,3
+1,TP and CB,firefox,64.0a1,https://www.bloomberg.com/europe,12
+1,TP and CB,firefox,64.0a1,https://www.ft.com/,3
+1,TP and CB,firefox,64.0a1,http://mareonline.nl/,1
+1,TP and CB,firefox,64.0a1,http://global.oup.com/?cc=nl,2
+1,TP and CB,firefox,64.0a1,https://www.bepress.com/,0
+1,TP and CB,firefox,64.0a1,https://www.plusonline.nl/,0
+1,TP and CB,firefox,64.0a1,https://www.buzzfeed.com/,26
+1,TP and CB,firefox,64.0a1,https://forbes.com/,1
+1,TP and CB,firefox,64.0a1,https://www.vice.com/nl,6
+1,TP and CB,firefox,64.0a1,https://www.theguardian.com/,4
+1,TP and CB,firefox,64.0a1,https://www.hln.be,0
+1,TP and CB,firefox,64.0a1,https://www.dailymail.co.uk/,6
+1,TP and CB,firefox,64.0a1,https://www.nytimes.com/,5
+1,TP and CB,firefox,64.0a1,https://as.com/,16
+1,TP and CB,firefox,64.0a1,http://www.espn.com/,26
+1,TP and CB,firefox,64.0a1,https://nl.hardware.info/,0
+1,TP and CB,firefox,64.0a1,https://computertotaal.nl,1
+1,TP and CB,firefox,64.0a1,https://www.cnet.com/,4
+1,TP and CB,firefox,64.0a1,https://www.buienradar.nl/,2
+1,TP and CB,firefox,64.0a1,https://www.weeronline.nl/,1
+1,TP and CB,firefox,64.0a1,https://www.accuweather.com/en/nl/netherlands-weather,16
+1,TP and CB,firefox,64.0a1,https://knmi.nl/home,1
+1,TP and CB,firefox,64.0a1,https://www.weerplaza.nl/,2
+1,TP and CB,firefox,64.0a1,https://nos.nl/,1
+1,TP and CB,firefox,64.0a1,https://www.nrc.nl/,2
+1,TP and CB,firefox,64.0a1,https://www.volkskrant.nl/,0
+1,TP and CB,firefox,64.0a1,https://www.trouw.nl/,1
+1,TP and CB,firefox,64.0a1,https://www.parool.nl/,1
+1,TP and CB,firefox,64.0a1,https://www.metronieuws.nl/,0
+2,no TP,firefox,60.2.2,https://www.nu.nl/,7
+2,no TP,firefox,60.2.2,https://www.telegraaf.nl/,1
+2,no TP,firefox,60.2.2,https://www.ad.nl/,4
+2,no TP,firefox,60.2.2,https://tweakers.net/,1
+2,no TP,firefox,60.2.2,https://www.businessinsider.nl,10
+2,no TP,firefox,60.2.2,https://www.bloomberg.com/europe,29
+2,no TP,firefox,60.2.2,https://www.ft.com/,4
+2,no TP,firefox,60.2.2,http://mareonline.nl/,4
+2,no TP,firefox,60.2.2,http://global.oup.com/?cc=nl,6
+2,no TP,firefox,60.2.2,https://www.bepress.com/,5
+2,no TP,firefox,60.2.2,https://www.plusonline.nl/,2
+2,no TP,firefox,60.2.2,https://www.buzzfeed.com/,32
+2,no TP,firefox,60.2.2,https://forbes.com/,1
+2,no TP,firefox,60.2.2,https://www.vice.com/nl,20
+2,no TP,firefox,60.2.2,https://www.theguardian.com/,8
+2,no TP,firefox,60.2.2,https://www.hln.be,3
+2,no TP,firefox,60.2.2,https://www.dailymail.co.uk/,11
+2,no TP,firefox,60.2.2,https://www.nytimes.com/,15
+2,no TP,firefox,60.2.2,https://as.com/,23
+2,no TP,firefox,60.2.2,http://www.espn.com/,29
+2,no TP,firefox,60.2.2,https://nl.hardware.info/,0
+2,no TP,firefox,60.2.2,https://computertotaal.nl,1
+2,no TP,firefox,60.2.2,https://www.cnet.com/,17
+2,no TP,firefox,60.2.2,https://www.buienradar.nl/,0
+2,no TP,firefox,60.2.2,https://www.weeronline.nl/,6
+2,no TP,firefox,60.2.2,https://www.accuweather.com/en/nl/netherlands-weather,20
+2,no TP,firefox,60.2.2,https://knmi.nl/home,5
+2,no TP,firefox,60.2.2,https://www.weerplaza.nl/,5
+2,no TP,firefox,60.2.2,https://nos.nl/,4
+2,no TP,firefox,60.2.2,https://www.nrc.nl/,9
+2,no TP,firefox,60.2.2,https://www.volkskrant.nl/,0
+2,no TP,firefox,60.2.2,https://www.trouw.nl/,1
+2,no TP,firefox,60.2.2,https://www.parool.nl/,1
+2,no TP,firefox,60.2.2,https://www.metronieuws.nl/,0
+2,no TP,firefox,62.0.3,https://www.nu.nl/,7
+2,no TP,firefox,62.0.3,https://www.telegraaf.nl/,1
+2,no TP,firefox,62.0.3,https://www.ad.nl/,4
+2,no TP,firefox,62.0.3,https://tweakers.net/,1
+2,no TP,firefox,62.0.3,https://www.businessinsider.nl,10
+2,no TP,firefox,62.0.3,https://www.bloomberg.com/europe,29
+2,no TP,firefox,62.0.3,https://www.ft.com/,4
+2,no TP,firefox,62.0.3,http://mareonline.nl/,4
+2,no TP,firefox,62.0.3,http://global.oup.com/?cc=nl,6
+2,no TP,firefox,62.0.3,https://www.bepress.com/,5
+2,no TP,firefox,62.0.3,https://www.plusonline.nl/,2
+2,no TP,firefox,62.0.3,https://www.buzzfeed.com/,30
+2,no TP,firefox,62.0.3,https://forbes.com/,1
+2,no TP,firefox,62.0.3,https://www.vice.com/nl,20
+2,no TP,firefox,62.0.3,https://www.theguardian.com/,8
+2,no TP,firefox,62.0.3,https://www.hln.be,1
+2,no TP,firefox,62.0.3,https://www.dailymail.co.uk/,11
+2,no TP,firefox,62.0.3,https://www.nytimes.com/,15
+2,no TP,firefox,62.0.3,https://as.com/,21
+2,no TP,firefox,62.0.3,http://www.espn.com/,18
+2,no TP,firefox,62.0.3,https://nl.hardware.info/,0
+2,no TP,firefox,62.0.3,https://computertotaal.nl,1
+2,no TP,firefox,62.0.3,https://www.cnet.com/,31
+2,no TP,firefox,62.0.3,https://www.buienradar.nl/,5
+2,no TP,firefox,62.0.3,https://www.weeronline.nl/,7
+2,no TP,firefox,62.0.3,https://www.accuweather.com/en/nl/netherlands-weather,19
+2,no TP,firefox,62.0.3,https://knmi.nl/home,5
+2,no TP,firefox,62.0.3,https://www.weerplaza.nl/,5
+2,no TP,firefox,62.0.3,https://nos.nl/,1
+2,no TP,firefox,62.0.3,https://www.nrc.nl/,9
+2,no TP,firefox,62.0.3,https://www.volkskrant.nl/,0
+2,no TP,firefox,62.0.3,https://www.trouw.nl/,1
+2,no TP,firefox,62.0.3,https://www.parool.nl/,1
+2,no TP,firefox,62.0.3,https://www.metronieuws.nl/,0
 2,no TP,firefox,64.0a1,https://www.nu.nl/,7
-2,no TP,firefox,64.0a1,https://www.nos.nl/,10
-2,TP,firefox,60.2.2,https://www.nu.nl/,8
-2,TP,firefox,60.2.2,https://www.nos.nl/,6
-2,TP,firefox,62.0.3,https://www.nu.nl/,8
-2,TP,firefox,62.0.3,https://www.nos.nl/,6
-2,TP,firefox,64.0a1,https://www.nu.nl/,8
-2,TP,firefox,64.0a1,https://www.nos.nl/,10
-2,TP and CB,firefox,64.0a1,https://www.nu.nl/,8
-2,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-3,no TP,firefox,60.2.2,https://www.nu.nl/,8
-3,no TP,firefox,60.2.2,https://www.nos.nl/,10
-3,no TP,firefox,62.0.3,https://www.nu.nl/,8
-3,no TP,firefox,62.0.3,https://www.nos.nl/,10
-3,no TP,firefox,64.0a1,https://www.nu.nl/,8
-3,no TP,firefox,64.0a1,https://www.nos.nl/,10
-3,TP,firefox,60.2.2,https://www.nu.nl/,8
-3,TP,firefox,60.2.2,https://www.nos.nl/,6
-3,TP,firefox,62.0.3,https://www.nu.nl/,6
-3,TP,firefox,62.0.3,https://www.nos.nl/,6
-3,TP,firefox,64.0a1,https://www.nu.nl/,8
-3,TP,firefox,64.0a1,https://www.nos.nl/,10
-3,TP and CB,firefox,64.0a1,https://www.nu.nl/,6
-3,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-4,no TP,firefox,60.2.2,https://www.nu.nl/,8
-4,no TP,firefox,60.2.2,https://www.nos.nl/,10
-4,no TP,firefox,62.0.3,https://www.nu.nl/,8
-4,no TP,firefox,62.0.3,https://www.nos.nl/,10
-4,no TP,firefox,64.0a1,https://www.nu.nl/,7
-4,no TP,firefox,64.0a1,https://www.nos.nl/,10
-4,TP,firefox,60.2.2,https://www.nu.nl/,8
-4,TP,firefox,60.2.2,https://www.nos.nl/,6
-4,TP,firefox,62.0.3,https://www.nu.nl/,6
-4,TP,firefox,62.0.3,https://www.nos.nl/,6
-4,TP,firefox,64.0a1,https://www.nu.nl/,8
-4,TP,firefox,64.0a1,https://www.nos.nl/,10
-4,TP and CB,firefox,64.0a1,https://www.nu.nl/,7
-4,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-5,no TP,firefox,60.2.2,https://www.nu.nl/,8
-5,no TP,firefox,60.2.2,https://www.nos.nl/,10
-5,no TP,firefox,62.0.3,https://www.nu.nl/,8
-5,no TP,firefox,62.0.3,https://www.nos.nl/,10
-5,no TP,firefox,64.0a1,https://www.nu.nl/,8
-5,no TP,firefox,64.0a1,https://www.nos.nl/,10
-5,TP,firefox,60.2.2,https://www.nu.nl/,8
-5,TP,firefox,60.2.2,https://www.nos.nl/,6
-5,TP,firefox,62.0.3,https://www.nu.nl/,8
-5,TP,firefox,62.0.3,https://www.nos.nl/,6
-5,TP,firefox,64.0a1,https://www.nu.nl/,8
-5,TP,firefox,64.0a1,https://www.nos.nl/,10
-5,TP and CB,firefox,64.0a1,https://www.nu.nl/,8
-5,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-6,no TP,firefox,60.2.2,https://www.nu.nl/,8
-6,no TP,firefox,60.2.2,https://www.nos.nl/,10
-6,no TP,firefox,62.0.3,https://www.nu.nl/,8
-6,no TP,firefox,62.0.3,https://www.nos.nl/,10
-6,no TP,firefox,64.0a1,https://www.nu.nl/,8
-6,no TP,firefox,64.0a1,https://www.nos.nl/,10
-6,TP,firefox,60.2.2,https://www.nu.nl/,8
-6,TP,firefox,60.2.2,https://www.nos.nl/,6
-6,TP,firefox,62.0.3,https://www.nu.nl/,8
-6,TP,firefox,62.0.3,https://www.nos.nl/,6
-6,TP,firefox,64.0a1,https://www.nu.nl/,8
-6,TP,firefox,64.0a1,https://www.nos.nl/,10
-6,TP and CB,firefox,64.0a1,https://www.nu.nl/,7
-6,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-7,no TP,firefox,60.2.2,https://www.nu.nl/,8
-7,no TP,firefox,60.2.2,https://www.nos.nl/,10
-7,no TP,firefox,62.0.3,https://www.nu.nl/,7
-7,no TP,firefox,62.0.3,https://www.nos.nl/,10
-7,no TP,firefox,64.0a1,https://www.nu.nl/,8
-7,no TP,firefox,64.0a1,https://www.nos.nl/,10
-7,TP,firefox,60.2.2,https://www.nu.nl/,8
-7,TP,firefox,60.2.2,https://www.nos.nl/,6
-7,TP,firefox,62.0.3,https://www.nu.nl/,8
-7,TP,firefox,62.0.3,https://www.nos.nl/,6
-7,TP,firefox,64.0a1,https://www.nu.nl/,8
-7,TP,firefox,64.0a1,https://www.nos.nl/,10
-7,TP and CB,firefox,64.0a1,https://www.nu.nl/,8
-7,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-8,no TP,firefox,60.2.2,https://www.nu.nl/,8
-8,no TP,firefox,60.2.2,https://www.nos.nl/,10
-8,no TP,firefox,62.0.3,https://www.nu.nl/,8
-8,no TP,firefox,62.0.3,https://www.nos.nl/,10
-8,no TP,firefox,64.0a1,https://www.nu.nl/,8
-8,no TP,firefox,64.0a1,https://www.nos.nl/,10
-8,TP,firefox,60.2.2,https://www.nu.nl/,8
-8,TP,firefox,60.2.2,https://www.nos.nl/,6
-8,TP,firefox,62.0.3,https://www.nu.nl/,8
-8,TP,firefox,62.0.3,https://www.nos.nl/,6
-8,TP,firefox,64.0a1,https://www.nu.nl/,8
-8,TP,firefox,64.0a1,https://www.nos.nl/,10
-8,TP and CB,firefox,64.0a1,https://www.nu.nl/,7
-8,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
-9,no TP,firefox,60.2.2,https://www.nu.nl/,7
-9,no TP,firefox,60.2.2,https://www.nos.nl/,10
-9,no TP,firefox,62.0.3,https://www.nu.nl/,8
-9,no TP,firefox,62.0.3,https://www.nos.nl/,10
-9,no TP,firefox,64.0a1,https://www.nu.nl/,7
-9,no TP,firefox,64.0a1,https://www.nos.nl/,10
-9,TP,firefox,60.2.2,https://www.nu.nl/,8
-9,TP,firefox,60.2.2,https://www.nos.nl/,6
-9,TP,firefox,62.0.3,https://www.nu.nl/,8
-9,TP,firefox,62.0.3,https://www.nos.nl/,6
-9,TP,firefox,64.0a1,https://www.nu.nl/,8
-9,TP,firefox,64.0a1,https://www.nos.nl/,10
-9,TP and CB,firefox,64.0a1,https://www.nu.nl/,8
-9,TP and CB,firefox,64.0a1,https://www.nos.nl/,6
+2,no TP,firefox,64.0a1,https://www.telegraaf.nl/,1
+2,no TP,firefox,64.0a1,https://www.ad.nl/,4
+2,no TP,firefox,64.0a1,https://tweakers.net/,1
+2,no TP,firefox,64.0a1,https://www.businessinsider.nl,9
+2,no TP,firefox,64.0a1,https://www.bloomberg.com/europe,29
+2,no TP,firefox,64.0a1,https://www.ft.com/,4
+2,no TP,firefox,64.0a1,http://mareonline.nl/,4
+2,no TP,firefox,64.0a1,http://global.oup.com/?cc=nl,6
+2,no TP,firefox,64.0a1,https://www.bepress.com/,5
+2,no TP,firefox,64.0a1,https://www.plusonline.nl/,2
+2,no TP,firefox,64.0a1,https://www.buzzfeed.com/,28
+2,no TP,firefox,64.0a1,https://forbes.com/,1
+2,no TP,firefox,64.0a1,https://www.vice.com/nl,21
+2,no TP,firefox,64.0a1,https://www.theguardian.com/,8
+2,no TP,firefox,64.0a1,https://www.hln.be,4
+2,no TP,firefox,64.0a1,https://www.dailymail.co.uk/,12
+2,no TP,firefox,64.0a1,https://www.nytimes.com/,15
+2,no TP,firefox,64.0a1,https://as.com/,24
+2,no TP,firefox,64.0a1,http://www.espn.com/,18
+2,no TP,firefox,64.0a1,https://nl.hardware.info/,0
+2,no TP,firefox,64.0a1,https://computertotaal.nl,1

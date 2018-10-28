@@ -11,7 +11,7 @@ import os
 import csv
 import matplotlib as mpl
 # to work around $DISPLAY error in terminal moder
-#mpl.use('Agg')
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 import matplotlib.patches as mpatches
@@ -96,8 +96,8 @@ plt.gca().yaxis.grid(color='b', linestyle='--', linewidth=1, alpha=0.1)
 plt.gca().yaxis.set_major_locator(plt.MaxNLocator(20))
 
 #plt.errorbar([i+1 for i,e in enumerate(data)], np.mean(data, axis=0), yerr=np.std(data, axis=0), color='green', linestyle='-', linewidth=1, alpha=0.50)
-plt.title('Effectiveness of Mozilla Firefox browsers anti-tracking approaches.\n Reserved page loading and pause between browsers sessions is 15 seconds \n Each page in each browser session was visited 100 times', 
-            fontsize=10, fontweight='bold')
+plt.title('Effectiveness of Mozilla Firefox browsers anti-tracking approaches.\n 35 visited URLs 10 times each. Page loading limitation is 10 seconds. \n Pause between browsers sessions is 60 seconds.', 
+            fontsize=8, fontweight='bold')
 
 plt.plot([], c='#4daf4a', label='ESR 60.2.2')
 plt.plot([], c='#377eb8', label='Release 62.0.3')
@@ -109,11 +109,11 @@ print(usecases)
 
 print(tuple([x+3 for x in range(len(usecases))]))
 
-plt.xlabel(x_label, fontweight='bold')
-plt.ylabel(y_label, fontweight='bold')
+plt.xlabel(x_label, fontsize=8, fontweight='bold')
+plt.ylabel(y_label, fontsize=8, fontweight='bold')
 
 plt.xticks((1, 4, 7), usecases)
-plt.xlim(-1, len(usecases)*4)
+plt.xlim(-1, len(usecases)*4.5)
 
 plt.savefig(str('results.png'), format='png', dpi=300)
 plt.show()
