@@ -36,7 +36,7 @@ with open(path_csv, 'r', encoding='utf-8') as results:
             csv_data.append((row[1][1], row[1][3], row[1][5]))
 print ("Group of usecases by x axis: {}".format(g_label))
 print ("Browser versions by x axis: {}".format(x_label))
-print ("Amount of cookies by y axis: {}".format(y_label))
+print ("Number of cookies by y axis: {}".format(y_label))
 #print (csv_data)
 
 # separate group and sort items from first column (group label)
@@ -96,7 +96,7 @@ plt.gca().yaxis.grid(color='b', linestyle='--', linewidth=1, alpha=0.1)
 plt.gca().yaxis.set_major_locator(plt.MaxNLocator(20))
 
 #plt.errorbar([i+1 for i,e in enumerate(data)], np.mean(data, axis=0), yerr=np.std(data, axis=0), color='green', linestyle='-', linewidth=1, alpha=0.50)
-plt.title('Effectiveness of Mozilla Firefox browsers anti-tracking approaches.\n 35 visited URLs 10 times each. Page loading limitation is 10 seconds. \n Pause between browsers sessions is 60 seconds.', 
+plt.title('The effectiveness of Mozilla Firefox browsers anti-tracking approaches.\n 35 visited URLs 10 times each. Page loading limitation is 10 seconds. \n Pause between browsers sessions is 60 seconds.', 
             fontsize=8, fontweight='bold')
 
 plt.plot([], c='#4daf4a', label='ESR 60.2.2')

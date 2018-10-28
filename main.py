@@ -160,7 +160,7 @@ def browserSession(binary, profile, usecase, experiment):
         #print (cookies)
         print("Experiment number: {}" .format(experiment))
         print("Use case: {}".format(usecase))
-        print("Amount of loaded cookies: {}" .format(len(cookies)))
+        print("Number of loaded cookies: {}" .format(len(cookies)))
         write_measurements(path_csv, experiment, usecase, driver.capabilities['browserName'], driver.capabilities['browserVersion'], site, len(cookies))
 
     driver.quit()
@@ -172,7 +172,7 @@ def write_measurements(path_csv, experiment, usecase, browserName, browserVersio
     if ((not os.path.isfile(path_csv)) or (os.path.isfile(path_csv) and os.stat(path_csv).st_size==0) and (experiment == 0)):
         with open(path_csv, 'w', encoding='utf-8') as results:
             writer = csv.writer(results)
-            fields = ['Experiment', 'Use case', 'Browser Name', 'Browser Version', 'site', 'Amount of loaded cookies']
+            fields = ['Experiment', 'Use case', 'Browser Name', 'Browser Version', 'site', 'Number of loaded cookies']
             writer.writerow(fields)
 
         with open(path_csv, 'a+', encoding='utf-8') as results:
